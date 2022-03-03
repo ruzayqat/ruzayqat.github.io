@@ -31,6 +31,12 @@
 
 }
 
+#grad5 {
+  background-image: linear-gradient(to bottom, #bcbcbc, #e4ebe7);
+	opacity: 0.8;
+
+}
+
 #four {
 	background-attachment: fixed;
 	background-image: url("images/network1.jpg");
@@ -53,6 +59,62 @@
 	background-position: top right;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
+}
+
+#eight {
+	background-attachment: fixed;
+	background-image: url("images/BB.jpg");
+	background-position: top right;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+@keyframes tipsy {
+  0 {
+    transform: translateX(-7%) translateY(-7%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-7%) translateY(-7%) rotate(360deg);
+  }
+}
+
+a1 {
+  color: #fffbf1;
+  text-shadow: 0 20px 25px #2e2e31, 0 40px 60px #2e2e31;
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: -3px;
+  margin: 0;
+  position: absolute;
+  top: 7%;
+  left: 7%;
+  transform: translateX(-7%) translateY(-7%);
+
+}
+
+a1:before,
+a1:after {
+  content: '';
+  padding: .9em .4em;
+  position: absolute;
+  left: 7%;
+  width: 100%;
+  top: 7%;
+  display: block;
+  border: 10px solid red;
+  transform: translateX(-7%) translateY(-7%) rotate(0deg);
+  animation: 10s infinite alternate ease-in-out tipsy;
+}
+
+a1:before {
+  border-color: #d9524a #d9524a rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  z-index: -1;
+}
+
+a1:after {
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #d9524a #d9524a;
+  box-shadow: 25px 25px 25px rgba(46, 46, 49, .8);
 }
 
 </style>
@@ -78,7 +140,7 @@
 							<li><a href="#four">Collaborators</a></li>
 							<li><a href="#five">Code</a></li>
 							<li><a href="#six">Talks</a></li>
-							<li><a href="#seven">Work Experience</a></li>
+							<!-- <li><a href="#seven">Work Experience</a></li> -->
 							<li><a href="#eight">Teaching</a></li>
 							<li><a href="#contactme">Contact Me</a></li>
 						</ul>
@@ -98,6 +160,63 @@
 								<li><a href="#one" class="button scrolly">Learn more</a></li>
 							</ul>
 						</div>
+						<div class="inner">
+							<p>
+								<span style="color: #ffffff"><a1>Recent News</a1></span>
+                  <br>
+                  <br>
+                  <marquee width="60%" direction="up" height="100px" scrollamount="3"
+                  style="box-sizing: content-box; height: 250px; padding: 10px; border:RED 3px SOLID">
+                  <p>
+                     <span style="color: #c9edb9">Fall 2021/Spring 2022: </span>
+                     <span style="color:WHITE">
+                       Organizing a seminar on computational probability and statistics. For more details about
+    								           the coming talks, please click
+                               <a href="https://cemse.kaust.edu.sa/compprob/news/seminar-talks-fall-2021-spring-2022"
+    								                   target="_blank" >here.</a>
+                      </span>
+                   </p>
+                   <p>
+                    <span style="color: #c9edb9">April 2022: </span>
+                    <span style="color:WHITE">
+                      Giving a talk at  <a href="https://www.siam.org/conferences/cm/conference/uq22" arget="_blank">2022 SIAM UQ</a>
+                      on multilevel estimation of normalizing constants using EnKBF
+                    </span>
+                   </p>
+
+                   <p>
+                    <span style="color: #c9edb9">April 2022: </span>
+                    <span style="color:WHITE">
+                      Giving an invited talk at <a href="https://www.utk.edu/" arget="_blank"> the Math Department of UTK</a> on a lagged particle filter for stable high-dimensional
+											 filtering of a class of state-space models.
+                    </span>
+                   </p>
+
+                   <p>
+                    <span style="color: #c9edb9">June 2022: </span>
+                    <span style="color:WHITE">
+                      Giving a talk at
+                      <a href="https://enkf.norceprosjekt.no/enkf-workshop/enkf-workshop-2022-kviknes-hotel-balestrand-norway" arget="_blank">
+                        2022 EnKF Workshop, Norway</a>
+                        on log-normalizing constant using EnKBF
+                      with applications to high-dimensional models.
+                    </span>
+                   </p>
+
+                   <p>
+                    <span style="color: #c9edb9">July 2022: </span>
+                    <span style="color:WHITE">
+                      Giving a talk at <a href="https://www.ricam.oeaw.ac.at/events/conferences/mcqmc2022/" arget="_blank">
+                        15th International Conference on MCQMC, Austria</a> on a lagged particle filter for stable high-dimensional
+											  filtering of a class of state-space models.
+                    </span>
+                   </p>
+
+                 </marquee>
+
+							</p>
+						</div>
+
 					</section>
 
 					<!-- One -->
@@ -116,6 +235,7 @@
 												In 2012, I earned my Bachelor degree in Physics and Mathematics
 												from <a href="https://www.birzeit.edu/en" target="_blank"  >Birzeit University</a>, Birzeit, Palestine.
 												</p>
+
 									<!--
 										<ul class="actions">
 											<li><a href="generic.html" class="button">Learn more</a></li>
@@ -483,10 +603,37 @@
 								</div>
 					 </div>
 					</section>
+				</section>
 
-
-
-
+					<!-- six-->
+						<section id="eight" class="wrapper style1 fullscreen fade-up">
+							<div align ="center" id="grad5">
+								<span style="color: #315a3f; font-weight:bold">
+								<h1> <span style="color: #315a3f; font-weight:bold"> Courses Taught </span></h1>
+								<section>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th><span style="color: #315a3f; font-weight:bold">Date</span></th>
+													<th><span style="color: #315a3f; font-weight:bold">Institute</span></th>
+													<th><span style="color: #315a3f; font-weight:bold">Location</span></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>(July 2022)</td>
+													<td>15th International Conference on Monte Carlo and Quasi-Monte Carlo
+														Methods in Scientific Computing</td>
+													<td>Linz, Austria</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</span>
+						 </div>
+						</section>
+					</section>
 
 
 				<!-- Contact -->
