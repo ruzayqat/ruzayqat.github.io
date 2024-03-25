@@ -122,8 +122,47 @@ img.one {
   width: auto;
 }
 
-
 </style>
+
+<style>
+.scrolling-container {
+  height: 200px; /* Adjust the height as per your preference */
+  overflow-y: scroll; /* Use "scroll" instead of "auto" */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-100% + 200px)); /* Adjust the value based on the container height */
+  }
+}
+
+#news-list {
+  padding: 10px;
+  margin-bottom: 0;
+  animation: scroll 10s linear infinite;
+}
+
+#news-list li {
+  margin-bottom: 10px;
+}
+</style>
+
+<script>
+// JavaScript code to pause and resume the animation
+const newsList = document.getElementById("news-list");
+const scrollingContainer = document.querySelector(".scrolling-container");
+
+scrollingContainer.addEventListener("mouseover", function() {
+  newsList.style.animationPlayState = "paused";
+});
+
+scrollingContainer.addEventListener("mouseout", function() {
+  newsList.style.animationPlayState = "running";
+});
+</script>
 
 	<head>
 		<title>Hamza Ruzayqat</title>
@@ -154,28 +193,6 @@ img.one {
 				</div>
 			</section>
 
-
-
-      <style>
-      .news-section {
-        height: 400px;
-        overflow-y: scroll;
-      }
-
-      .news-section ul {
-        padding: 10px;
-        margin: 0;
-        list-style-type: none;
-      }
-
-      .news-section li {
-        margin-bottom: 10px;
-      }
-      </style>
-
-
-
-
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -199,87 +216,96 @@ img.one {
                   <br>
                   <br>
 
-                  <marquee width="65%" direction="up" height="400px" scrollamount="3"
-                  hspace="10" style="align: right; box-sizing: content-box; height: 480px; padding: 10px; border:#d9524a 5px SOLID; height: 400px; overflow: auto;">
+                  <div class="scrolling-container">
+                    <ul id="news-list">
 
 
 
-                  <p>
+
+
+                  <li>
                      <span style="color: #c9edb9"> (Mar 25, 2024) </span>
                      <span style="color:WHITE">
                        (Seminar talk) Department of Statistics and Data Science, Washington University in St. Louis, MO, USA
                                <a href=""
                                        target="_blank" ></a>
                       </span>
-                  </p>
+                  </li>
 
 
-                  <p>
+                  <li>
                      <span style="color: #c9edb9"> (Jan 23, 2024) </span>
                      <span style="color:WHITE">
                        (Invited talk) IESE Department, the University of Illinois Urbana-Champaign, Illinois, USA
                                <a href=""
                                        target="_blank" ></a>
                       </span>
-                   </p>
+                   </li>
 
 
-                  <p>
+                  <li>
                     <span style="color: #c9edb9">Nov 18, 2023: </span>
                     <span style="color:WHITE">
                       New preprint is out "Unbiased and Multilevel Methods for a Class of Diffusions Partially Observed via Marked Point Processes"
                       which can be found on arXiv at this link:
                       <a href="https://arxiv.org/pdf/2311.09875.pdf" arget="_blank">https://arxiv.org/pdf/2311.09875.pdf</a>
                     </span>
-                   </p>
+                   </li>
 
-                   <p>
+                   <li>
                       <span style="color: #c9edb9"> (Oct 16, 2023) </span>
                       <span style="color:WHITE">
                         Presenting in the International Symposium on Data Assimilation (ISDA), Bologna, Italy
                                 <a href="https://eventi.unibo.it/isda2023"
                                         target="_blank" >https://eventi.unibo.it/isda2023</a>
                        </span>
-                    </p>
+                    </li>
 
-                   <p>
+                   <li>
                       <span style="color: #c9edb9"> (Sep 27, 2023) </span>
                       <span style="color:WHITE">
                         Giving a talk in the Stochastic Seminar at New York University Abu Dhabi
                                 <a href="https://wp.nyu.edu/adps/"
      								                   target="_blank" >https://wp.nyu.edu/adps/</a>
                        </span>
-                    </p>
+                    </li>
 
-                  <p>
+                  <li>
                     <span style="color: #c9edb9">Sep 26, 2023: </span>
                     <span style="color:WHITE">
                       New preprint is out "On Time Uniform Wong-Zakai Approximation Theorems"
                       which can be found on arXiv at this link:
                       <a href="https://arxiv.org/pdf/2310.04967.pdf" arget="_blank">https://arxiv.org/pdf/2310.04967.pdf</a>
                     </span>
-                   </p>
+                   </li>
 
 
-                  <p>
+                  <li>
                     <span style="color: #c9edb9">Sep 26, 2023: </span>
                     <span style="color:WHITE">
                       New preprint is out "Bayesian Parameter Inference for Partially Observed Diffusions using Multilevel Stochastic Runge-Kutta Methods"
                       which can be found on arXiv at this link:
                       <a href="https://arxiv.org/pdf/2309.13557.pdf" arget="_blank">https://arxiv.org/pdf/2309.13557.pdf</a>
                     </span>
-                   </p>
+                   </li>
 
 
+                   <!-- <p>
+                     <span style="color: #c9edb9">Sep 18, 2023: </span>
+                     <span style="color:WHITE">
+                       New preprint is out "Bayesian Parameter Inference for Partially Observed Stochastic Volterra Equations" which can be found on arXiv at this link:
+                       <a href="https://arxiv.org/pdf/2310.03114.pdf" arget="_blank">https://arxiv.org/pdf/2310.03114.pdf</a>
+                     </span>
+                    </p> -->
 
 
-                  <p>
+                  <li>
                     <span style="color: #c9edb9">Sep 18, 2023: </span>
                     <span style="color:WHITE">
                       New preprint is out "Unbiased Parameter Estimation for Partially Observed Diffusions" which can be found on arXiv at this link:
                       <a href="https://arxiv.org/pdf/2309.10589.pdf" arget="_blank">https://arxiv.org/pdf/2309.10589.pdf</a>
                     </span>
-                   </p>
+                   </li>
 
 
 
@@ -341,8 +367,8 @@ img.one {
                     </span>
                    </p> -->
 
-                 </marquee>
-
+                 </ul>
+               </div>
 							</p>
 						</div>
 
