@@ -125,29 +125,10 @@ img.one {
 </style>
 
 <style>
-.scrolling-container {
-  height: 200px; /* Adjust the height as per your preference */
-  overflow-y: scroll; /* Use "scroll" instead of "auto" */
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(calc(-100% + 200px)); /* Adjust the value based on the container height */
-  }
-}
-
-#news-list {
-  padding: 10px;
-  margin-bottom: 0;
-  animation: scroll 10s linear infinite;
-}
-
-#news-list li {
-  margin-bottom: 10px;
-}
+    .scrollable-list {
+      height: 200px;
+      overflow-y: scroll;
+    }
 </style>
 
 <script>
@@ -212,17 +193,10 @@ scrollingContainer.addEventListener("mouseout", function() {
                   <br>
                   <br>
                   <br>
-                  <br>
-                  <br>
-                  <br>
 
-                  <div class="scrolling-container">
-                    <ul id="news-list">
+                  <div class="scrollable-list">
 
-
-
-
-
+                  <ul>
                   <li>
                      <span style="color: #c9edb9"> (Mar 25, 2024) </span>
                      <span style="color:WHITE">
@@ -521,19 +495,22 @@ scrollingContainer.addEventListener("mouseout", function() {
                    <a href="https://arxiv.org/pdf/2310.04967.pdf" target="_blank" class="button">PDF</a>
                 </li>
 
-                <li>13. (2023) Del Moral, P., Hu, S., Jasra, A., <span style="color: #ffffff">Ruzayqat, H.</span>, & Wang, X.
-                   <span style="color: #ffe599; font-weight:bold">Bayesian Parameter Inference for Partially Observed Diffusions using
-                     Multilevel Stochastic Runge-Kutta Methods.</span>
-                   <a href="https://arxiv.org/pdf/2309.13557.pdf" target="_blank" class="button">PDF</a>
-                </li>
 
-                <li>12. (2023) Awadelkarim, E., Jasra, A., & <span style="color: #ffffff">Ruzayqat, H.</span>
+                <li>13. (2023) Awadelkarim, E., Jasra, A., & <span style="color: #ffffff">Ruzayqat, H.</span>
                    <span style="color: #ffe599; font-weight:bold">Unbiased Parameter Estimation for Partially Observed Diffusions.</span>
                    <a href="https://arxiv.org/pdf/2309.10589.pdf" target="_blank" class="button">PDF</a>
                 </li>
 
 
                 <h1>Publications</h1>
+
+                <li>12. (2023) Del Moral, P., Hu, S., Jasra, A., <span style="color: #ffffff">Ruzayqat, H.</span>, & Wang, X.
+                   <span style="color: #ffe599; font-weight:bold">Bayesian Parameter Inference for Partially Observed Diffusions using
+                     Multilevel Stochastic Runge-Kutta Methods.</span>
+                     <span style="color: #c9edb9; font-weight:bold"> (To appear in the International Journal for Uncertainty Quantification).
+                      </span>
+                   <a href="https://arxiv.org/pdf/2309.13557.pdf" target="_blank" class="button">PDF</a>
+                </li>
 
                 <li>11. (2023) <span style="color: #ffffff">Ruzayqat, H.</span>, Beskos, A.,  Crisan, D., Jasra, A.
                   & Kantas, N., <span style="color: #ffe599; font-weight:bold">Sequential Markov Chain Monte Carlo for Lagrangian Data
@@ -711,9 +688,15 @@ scrollingContainer.addEventListener("mouseout", function() {
                         alt="SCImago Journal &amp; Country Rank"  /></a>
                         </td>
 
-                      <td
-                      </td>
-                    </tr>
+                        <!--International Journal for Uncertainty Quantification -->
+                        <td
+                        <a href="https://www.scimagojr.com/journalsearch.php?q=21100415545&amp;tip=sid&amp;exact=no"
+                          title="SCImago Journal &amp; Country Rank"><img border="0"
+                          src="https://www.scimagojr.com/journal_img.php?id=21100415545"
+                          alt="SCImago Journal &amp; Country Rank"  /></a>
+                        </td>
+                      </tr>
+
 
                     </tbody>
                     </table>
@@ -832,7 +815,7 @@ scrollingContainer.addEventListener("mouseout", function() {
 										<tbody>
 
                       <tr>
-                          <td>(Jan 01, 2024)</td>
+                          <td>(Mar 25, 2024)</td>
                           <td> (Seminar talk) Department of Statistics and Data Science, Washington University in St. Louis</td>
                           <td> Missouri, USA</td>
                       </tr>
