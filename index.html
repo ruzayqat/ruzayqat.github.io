@@ -147,6 +147,171 @@ scrollingContainer.addEventListener("mouseout", function() {
 </script>
 
 
+<style>
+/* Grid Layout for Sections */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+/* Column Styles */
+.column {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Images Column */
+.column.images {
+  flex: 1 1 40%; /* Images column takes 40% of the row */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Content Column */
+.column.content {
+  flex: 1 1 60%; /* Content column takes 60% of the row */
+  text-align: left;
+}
+
+/* Responsive Images with Size Constraints */
+.responsive-image {
+  max-width: 95%;
+  max-height: 600px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+  .column {
+    flex: 1 1 100%;
+  }
+  .column.images {
+    margin-bottom: 20px;
+  }
+}
+</style>
+
+
+
+
+<style>
+/* Publication list  style when hovering by mouse */
+  .publication-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .publication-list li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #2e2e2e;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+
+  .publication-list li:hover {
+    transform: scale(1.03);
+    background-color: #444444;
+  }
+
+  .publication-list .authors {
+    color: #ffffff;
+    font-size: 14px;
+  }
+
+  .publication-list .title {
+    color: #ffe599;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .publication-list .button {
+    margin-top: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #00aaff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    font-size: 13px;
+  }
+
+  .publication-list .button:hover {
+    background-color: #0066cc;
+    color: #ffffff;
+  }
+</style>
+
+
+
+<style>
+/* For the Journals images */
+.grid-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Small gap between images */
+    justify-content: center; /* Center the content */
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9; /* Optional: a light background for contrast */
+    border-radius: 8px;
+}
+
+.grid-item {
+    flex: 0 0 calc(16.66% - 10px); /* Ensures six items per row (100% ÷ 6 = 16.66%) */
+    max-width: calc(16.66% - 10px);
+    text-align: center; /* Center the image */
+    border-radius: 5px; /* Rounded edges for a modern look */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -158,6 +323,20 @@ scrollingContainer.addEventListener("mouseout", function() {
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-M72F783R');</script>
     <!-- End Google Tag Manager -->
+
+    <script type="text/javascript">
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 
 
 		<title>Hamza Ruzayqat Personal Webpage</title>
@@ -221,7 +400,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li>
                        <span style="color: #c9edb9"> (March 3-7, 2025) </span>
                        <span style="color:WHITE">
-                         (Orgonizing a minisymposium on DA) SIAM Conference on Computational Science and Engineering (CSE25), Fort Worth, Texas, U.S.
+                         (Organizing a minisymposium on DA) SIAM Conference on Computational Science and Engineering (CSE25), Fort Worth, Texas, U.S.
                                  <a href="https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=82251"
                                          target="_blank" >https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=82251</a>
                         </span>
@@ -494,7 +673,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<!-- Two -->
 				<section id="two" class="wrapper style3-alt spotlights">
 					<section>
-						<a class="image"><img src="images/growth.png" alt="" height ="400" width="auto" data-position="center center" /></a>
 						<div class="content">
 							<div class="inner">
 								<h2>Research</h2>
@@ -504,59 +682,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   fractional diffusions, numerical weather forecasting, stock market index prediction etc.
 
                   Among the areas in which I work are:
+                  <ul>
+                    <li>Monte Carlo Algorithms</li>
+                    <li>Uncertainty Quantification & Inverse Problems</li>
+                    <li>Data Assimilation</li>
+                    <li>Multilevel and Unbiased Methods</li>
+                    <li>Bayesian Inference</li>
+                    <li>MCMC</li>
+                  </ul>
 								</h4>
 
-								<ul class="actions">
-									<li><a href="#three" class="button">Learn more</a></li>
-								</ul>
-
-							</div>
-						</div>
-					</section>
-					<section style="background-color:#c7569d">
-						<a class="one"><img src="images/inv_prob.png" alt="" height ="400" width="auto" data-position="25% 25%" /></a>
-						<div class="content">
-							<div class="inner">
-								<h2>Monte Carlo methods (A General Area)</h2>
-								<p>This includes Markov chain Monte Carlo methods, sequential Monte Carlo methods and debiasing schemes.</p>
-								<ul class="actions">
-									<li><a href="#three" class="button">Learn more</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
-					<section style="background-color:#953d75">
-						<a  class="one"><img src="images/ensembles_vs_smcmc.png" alt=""  height ="300" width="400" data-position="25% 25%" /></a>
-						<div class="content">
-							<div class="inner">
-								<h2>Data assimilation</h2>
-								<p>This includes particle filtering (and lagged PF), ensemble Kalman/Kalman-Bucy filtering, and sequential MCMC.
-                  (These are still related to Monte Carlo)</p>
-								<ul class="actions">
-									<li><a href="#three" class="button">Learn more</a></li>
-								</ul>
-
-							</div>
-						</div>
-					</section>
-					<section style="background-color:#c7569d">
-						<a class="one"><img src="images/water_height.png" alt="" height ="320" width="auto" data-position="25% 25%" /></a>
-						<div class="content">
-							<div class="inner">
-								<h2>Uncertainty Quantification</h2>
-								<p>This includes online and offline parameter calibration (estimation) and inverse problems for anomalies detection.</p>
-								<ul class="actions">
-									<li><a href="#three" class="button">Learn more</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
-					<section style="background-color:#953d75">
-						<a  class="one"><img src="images/param_est.png" alt="" height ="265" width="auto" data-position="25% 25%" /></a>
-						<div class="content">
-							<div class="inner">
-								<h2>Bayesian statistics</h2>
-								<p>This includes Bayesian theory, Bayesian inference and unbiased parameter inference.</p>
 
 								<ul class="actions">
 									<li><a href="#three" class="button">Learn more</a></li>
@@ -565,14 +700,160 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							</div>
 						</div>
 					</section>
-				</section>
+
+          <section style="background-color:#c7569d">
+            <div class="row">
+              <div class="column images">
+                <!-- Add multiple images for this topic -->
+                <img src="images/MC.jpg" alt="Image 1" class="responsive-image" />
+              </div>
+              <div class="column content">
+                <h2>Monte Carlo methods (A General Area)</h2>
+                <p>
+                  This includes Markov chain Monte Carlo methods, sequential Monte Carlo methods, and multielevel Monte Carlo, debiasing schemes and many other areas.
+                </p>
+                <ul class="actions">
+                  <li><a href="#three" class="button">Learn more</a></li>
+                </ul>
+
+                <!-- Inline comment below images -->
+                  <p style="font-family: 'Courier New', Courier, monospace; color: #f0f0f0; font-size: 14px; margin-left: 20px; margin-right: 20px;">
+                    Monte Carlo methods encompass a broad class of computational algorithms that rely on repeated random sampling
+                    to estimate numerical results, and they are extensively used in areas like numerical integration,
+                    optimization, stochastic simulations, and Bayesian inference.
+                  </p>
+
+              </div>
+            </div>
+          </section>
+
+
+          <section style="background-color:#953d75">
+            <div class="row">
+              <div class="column images">
+                <!-- Add multiple images for Data Assimilation -->
+                <img src="images/ensembles_vs_smcmc.png" alt="Image 1" class="responsive-image" />
+                <img src="images/SWE_U.jpg" alt="Image 2" class="responsive-image" />
+              </div>
+              <div class="column content">
+                <h2>Data assimilation</h2>
+                <p>
+                  This includes particle filtering (and lagged PF), ensemble Kalman/Kalman-Bucy filtering, sequential MCMC and localization schemes.
+                </p>
+                <ul class="actions">
+                  <li><a href="#three" class="button">Learn more</a></li>
+                </ul>
+
+                <!-- Inline comment below images -->
+                  <p style="font-family: 'Courier New', Courier, monospace; color: #f0f0f0; font-size: 14px; margin-left: 20px; margin-right: 20px;">
+                    <strong>Note:</strong> The first image is from our QRJMS's paper on Sequential MCMC, highlighting the algorithm’s efficiency as state dimensions increase. It shows how the algorithm maintains high accuracy at a much lower computational cost than traditional ensemble methods.
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    The second image is obtained from our SIAM/JUQ's study on lagged particle filtering. The left column shows the x-axis horizontal velocity U of a fluid in a bounded domain simulated using shallow-water equations at different times taking as the reference. Noisy data is generated from this reference state (in fact the water height is observed at all grid points, while u and v are observed at one-third of the grid points). The second column illustrates the superior matching of the lagged particle filter results (with only 100 particles) to the reference state, compared to ensemble Kalman methods (with 1000 ensemble members).
+                  </p>
+
+
+              </div>
+            </div>
+          </section>
+
+          <section style="background-color:#c7569d">
+            <div class="row">
+              <div class="column images">
+                <!-- Add multiple images for Data Assimilation -->
+                <img src="images/anomaly_detect.jpg" alt="Image 1" class="responsive-image" />
+                <img src="images/inv_prob.png" alt="Image 2" class="responsive-image" />
+                <img src="images/EnKBF.jpg" alt="Image 2" class="responsive-image" />
+              </div>
+              <div class="column content">
+                <h2>Uncertainty Quantification & Inverse Problems</h2>
+                <p>
+                  This includes sensetivity analysis, online and offline parameter calibration (estimation), and inverse problems (e.g. anomalies detection in a fractional medium).
+                </p>
+                <ul class="actions">
+                  <li><a href="#three" class="button">Learn more</a></li>
+                </ul>
+
+                <!-- Inline comment below images -->
+                  <p style="font-family: 'Courier New', Courier, monospace; color: #f0f0f0; font-size: 14px; margin-left: 20px; margin-right: 20px;">
+                    <strong>Note:</strong> The first image is from our preprint on Bayesian anomaly detection in fractional mediums with
+                    variable order and variable diffusivity. The image shows that our algorithm is succeful in learning the elliptical anomaly
+                    geometrical features (center coodinates, major and minor axes and angle of rotation) and physical features (fractional order
+                    and diffsuivity).
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    The second image is obtained from our J. Comp. Phys.'s paper on unbiased estimation using Schrödinger-Föllmer sampler.
+                    The image shows the unbiased estimate of the mean of a posterior distribution of a log-permeability field in an elliptic
+                    PDE in terms of the pressure field. The PDE describes the presuure in a porous media flow. We sample from the Gaussian posterior
+                    using SF sampler unbiasedly.
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    The third image is obtained from our Adv. Appl. Probab.'s paper on estimating the log-normalizing constant of the
+                    the filtering distribution using ensemble-Kalman-Bucy filter (EnKBF). This estimate of the log-normalizing constant
+                    can then be used in an online algorithm to estimate unknown parameters in a state-space model. The image shows the
+                    estimation of a parameter in Lorenz 96 model (with 36 variables) using our offline parameter estimation algorithm.
+                  </p>
+
+              </div>
+            </div>
+          </section>
+
+          <section style="background-color:#953d75">
+            <div class="row">
+              <div class="column images">
+                <!-- Add multiple images for Data Assimilation -->
+                <img src="images/param_est.png" alt="Image 1" class="responsive-image" />
+                <img src="images/uld_vs_mala.jpg" alt="Image 2" class="responsive-image" />
+              </div>
+              <div class="column content">
+                <h2>Multilevel and Unbiased Estimation</h2>
+                <p>
+                This includes reducing the variance and the cost of a quantity of interest, multilevel and unbiased parameter inference.
+                </p>
+                <ul class="actions">
+                  <li><a href="#three" class="button">Learn more</a></li>
+                </ul>
+
+                <!-- Inline comment below images -->
+                  <p style="font-family: 'Courier New', Courier, monospace; color: #f0f0f0; font-size: 14px; margin-left: 20px; margin-right: 20px;">
+                    <strong>Note:</strong> The first image is from our Stat. Comput.'s paper on multilevel estimation fro the EnKBF-log-normalizing constant.
+                    The image show the estimation of a parameter in the Lorenz 63 model using the ML estimator.
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    The second image is obtained from our SIAM Scient. Comput.' paper on unbiased estimation using underdamped Langevin dynamics.
+                    The image shows the cost of our unbiased estimator (ULD) in seconds versus the unbiased Metropolis adjusted Langevin algorithm (UB-MALA)
+                    when sampling from a distribution $\pi(x) \propto e^{-U(x)}$, where $U(x)$ is a double-well potential and $x \in \mathbb{R}^{100}$.
+                    Our method provides an unbiased estimte of $\mathbb{E}_{\pi}[x]$ at a much lower cost than UB-MALA.
+                  </p>
+
+              </div>
+            </div>
+          </section>
+
 
 			<!-- Three -->
 				<section id="three" class="wrapper style1 fullscreen fade-up">
 					<div class="inner" id = "grad">
 						<h1>Preprints</h1>
-							<ul class="alt" class="actions">
 
+							<ul class="publication-list">
                 <li>16. (2024) <span style="color: #ffffff">Ruzayqat, H.</span> and Knio, O.
                    <span style="color: #ffe599; font-weight:bold">Local Sequential MCMC for Data Assimilation with Applications in Geoscience.</span>
                    <a href="https://arxiv.org/pdf/2409.07111" target="_blank" class="button">PDF</a>
@@ -719,87 +1000,61 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 									</li>
 
 
-                  <div class="table-wrapper">
-                    <table style="border:none;">
-                    <tbody>
-                      <tr>
-
-                        <!-- Quarterly Journal of the Royal Meteorological Society -->
-                        <td
-                          <a href="https://www.scimagojr.com/journalsearch.php?q=14082&amp;tip=sid&amp;exact=no"
-                          title="SCImago Journal &amp; Country Rank"><img border="0"
-                          src="https://www.scimagojr.com/journal_img.php?id=14082"
-                          alt="SCImago Journal &amp; Country Rank"  /></a>
-                        </td>
-
-                        <!-- Journal of Computational Physics -->
-                        <td <a href="https://www.scimagojr.com/journalsearch.php?q=13191&amp;tip=sid&amp;exact=no"
-                        title="SCImago Journal &amp; Country Rank"><img border="0"
-                        src="https://www.scimagojr.com/journal_img.php?id=13191"
-                        alt="SCImago Journal &amp; Country Rank"  /></a>
-                        </td>
-
-                      </tr>
-
-                      <tr>
-                        <!-- Journal of Chemical Theory and Computation -->
-                        <td style="border:none;"><a href="https://www.scimagojr.com/journalsearch.php?q=5100155074&amp;tip=sid&amp;exact=no"
-                          title="SCImago Journal &amp; Country Rank">
-                          <img border="0" src="https://www.scimagojr.com/journal_img.php?id=5100155074"
-                          alt="SCImago Journal &amp; Country Rank"  /></a>
-                        </td>
-                        <!-- SIAM Journal on Scientific Computing -->
-                        <td style="border:none;"><a href="https://www.scimagojr.com/journalsearch.php?q=26425&amp;tip=sid&amp;exact=no"
-                          title="SCImago Journal &amp; Country Rank">
-                          <img border="0" src="https://www.scimagojr.com/journal_img.php?id=26425"
-                          alt="SCImago Journal &amp; Country Rank"  /></a>
-                        </td>
-
-                      </tr>
-
-                      <tr>
-                        <!-- SIAM/ASA JUQ -->
-                        <td <a href="https://www.scimagojr.com/journalsearch.php?q=21100830444&amp;tip=sid&amp;exact=no"
-                          title="SCImago Journal &amp; Country Rank">
-                          <img border="0" src="https://www.scimagojr.com/journal_img.php?id=21100830444"
-                          alt="SCImago Journal &amp; Country Rank"  /></a>
-                        </td>
-
-                        <!-- Statistics and Computing -->
-                        <td <a href="https://www.scimagojr.com/journalsearch.php?q=23614&amp;tip=sid&amp;exact=no"
-                          title="SCImago Journal &amp; Country Rank"><img border="0"
-                          src="https://www.scimagojr.com/journal_img.php?id=23614"
-                          alt="SCImago Journal &amp; Country Rank"  /></a>
-                        </td>
-
-                      </tr>
-
-                      <tr>
-
-                        <!--International Journal for Uncertainty Quantification -->
-                        <td
-                        <a href="https://www.scimagojr.com/journalsearch.php?q=21100415545&amp;tip=sid&amp;exact=no"
-                          title="SCImago Journal &amp; Country Rank"><img border="0"
-                          src="https://www.scimagojr.com/journal_img.php?id=21100415545"
-                          alt="SCImago Journal &amp; Country Rank"  /></a>
-                        </td>
-
-                        <!-- SICON -->
-                        <td
-                        <a href="https://www.scimagojr.com/journalsearch.php?q=26405&amp;tip=sid&amp;exact=no"
-                        title="SCImago Journal &amp; Country Rank"><img border="0"
-                        src="https://www.scimagojr.com/journal_img.php?id=26405"
-                        alt="SCImago Journal &amp; Country Rank"  /></a>
-                        </td>
-
-                      </tr>
 
 
-                    </tbody>
-                    </table>
-                  </div>
-									<!-- Add a horizontal line -->
-									<hr width="400px;" color="red" size="6">
+                  <div class="grid-wrapper">
+                    <div class="grid-item">
+                        <a href="https://www.scimagojr.com/journalsearch.php?q=14082&amp;tip=sid&amp;exact=no">
+                            <img src="https://www.scimagojr.com/journal_img.php?id=14082" alt="Quarterly Journal of the Royal Meteorological Society">
+                        </a>
+                    </div>
+
+                    <div class="grid-item">
+                        <a href="https://www.scimagojr.com/journalsearch.php?q=26425&amp;tip=sid&amp;exact=no">
+                            <img src="https://www.scimagojr.com/journal_img.php?id=26425" alt="SIAM Journal on Scientific Computing">
+                        </a>
+                    </div>
+
+                    <div class="grid-item">
+                        <a href="https://www.scimagojr.com/journalsearch.php?q=13191&amp;tip=sid&amp;exact=no">
+                            <img src="https://www.scimagojr.com/journal_img.php?id=13191" alt="Journal of Computational Physics">
+                        </a>
+                    </div>
+
+                    <div class="grid-item">
+                        <a href="https://www.scimagojr.com/journalsearch.php?q=26405&amp;tip=sid&amp;exact=no">
+                            <img src="https://www.scimagojr.com/journal_img.php?id=26405" alt="SIAM Journal on Control and Optimization">
+                        </a>
+                    </div>
+
+                    <div class="grid-item">
+                        <a href="https://www.scimagojr.com/journalsearch.php?q=5100155074&amp;tip=sid&amp;exact=no">
+                            <img src="https://www.scimagojr.com/journal_img.php?id=5100155074" alt="Journal of Chemical Theory and Computation">
+                        </a>
+                    </div>
+
+                    <div class="grid-item">
+                        <a href="https://www.scimagojr.com/journalsearch.php?q=21100830444&amp;tip=sid&amp;exact=no">
+                            <img src="https://www.scimagojr.com/journal_img.php?id=21100830444" alt="SIAM / ASA Journal on Uncertainty Quantification">
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="https://www.scimagojr.com/journalsearch.php?q=23614&amp;tip=sid&amp;exact=no">
+                            <img src="https://www.scimagojr.com/journal_img.php?id=23614" alt="Statistics and Computing">
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="https://www.scimagojr.com/journalsearch.php?q=21100415545&amp;tip=sid&amp;exact=no">
+                            <img src="https://www.scimagojr.com/journal_img.php?id=21100415545" alt="International Journal for Uncertainty Quantification">
+                        </a>
+                    </div>
+
+                    <div class="grid-item">
+                        <a href="https://www.scimagojr.com/journalsearch.php?q=21101113590&amp;tip=sid&amp;exact=no">
+                            <img src="https://www.scimagojr.com/journal_img.php?id=21101113590" alt="Foundations of Data Science">
+                        </a>
+                    </div>
+                </div>
 
 							</ul>
 					</div>
@@ -818,13 +1073,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 												target="_blank" >Aimad Er-Raiy</a> (Airbus, France) </li>
 											<li><a href ="https://www.ucl.ac.uk/statistics/people/alexandrosbeskos"
 												target="_blank"  >Alexandros Beskos</a> (UCL, Statistics, UK) </li>
-											<li><a href ="https://sites.google.com/site/ajayjasra0/home"
-												target="_blank"  >Ajay Jasra</a> (KAUST, Computational Probability, KSA)</li>
 											<li><a href ="https://www.ma.ic.ac.uk/~dcrisan/"
 												target="_blank"  >Dan Crisan</a> (Imperial, Mathematics, UK) </li>
-                      <li><a href ="https://sites.google.com/view/neilc"
-  												target="_blank"  >Neil Chada</a> (Heriot Watt University, Statistics of Data Science, UK) </li>
-
+                      <li><a href= "https://people.bordeaux.inria.fr/pierre.delmoral/research.html"
+    												target="_blank"  >Pierre Del Moral</a> (INRIA, Bordeaux Research Center, France)</li>
 									 </span>
 									</ul>
 								</div>
@@ -832,8 +1084,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 									<ul class="alt">
 										<span style="color: #c9edb9; font-weight:bold">
 
-                      <li><a href= "https://people.bordeaux.inria.fr/pierre.delmoral/research.html"
-  												target="_blank"  >Pierre Del Moral</a> (INRIA, Bordeaux Research Center, France)</li>
                       <li><a href ="http://english.zuel.edu.cn/school/listm.htm"
       										target="_blank"  >Shulan Hu </a> (Zhongnan University of Economics and Law, Statistics & Mathematics, China) </li>
 											<li><a href = "https://www.ma.imperial.ac.uk/~nkantas/"
@@ -911,6 +1161,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 										</thead>
 										<tbody>
 
+
+                      <tr>
+                          <td>(March 3 - 7, 2025)</td>
+                          <td> (Organizing a minisymposium on DA in SIAM Conference on Computational Science and Engineering (CSE25)</td>
+                          <td> Fort Worth, Texas, USA </td>
+                      </tr>
 
                       <tr>
                           <td>(Feb 28, 2025)</td>
