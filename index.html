@@ -255,7 +255,7 @@ scrollingContainer.addEventListener("mouseout", function() {
 
 
 <style>
-/* For the Journals images */
+/* Main grid wrapper styling */
 .grid-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -267,8 +267,9 @@ scrollingContainer.addEventListener("mouseout", function() {
     border-radius: 8px;
 }
 
+/* Grid item styling */
 .grid-item {
-    flex: 0 0 calc(16.66% - 10px); /* Ensures six items per row (100% ÷ 6 = 16.66%) */
+    flex: 0 0 calc(16.66% - 10px); /* Default: six items per row */
     max-width: calc(16.66% - 10px);
     text-align: center; /* Center the image */
     border-radius: 5px; /* Rounded edges for a modern look */
@@ -276,15 +277,34 @@ scrollingContainer.addEventListener("mouseout", function() {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Image styling */
 .grid-item img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
+    border-radius: 5px; /* Matches the grid-item border */
 }
 
+/* Hover effect for grid items */
 .grid-item:hover {
     transform: scale(1.05); /* Slight zoom on hover */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive layout for tablets */
+@media (max-width: 768px) {
+    .grid-item {
+        flex: 0 0 calc(33.33% - 10px); /* Three items per row */
+        max-width: calc(33.33% - 10px);
+    }
+}
+
+/* Responsive layout for mobile phones */
+@media (max-width: 480px) {
+    .grid-item {
+        flex: 0 0 calc(50% - 10px); /* Two items per row */
+        max-width: calc(50% - 10px);
+    }
 }
 </style>
 
