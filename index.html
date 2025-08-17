@@ -38,21 +38,21 @@
 
 }
 
-#four {
+/*#four {
 	background-attachment: fixed;
 	background-image: url("images/network1.jpg");
 	background-position: top right;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-}
+}*/
 
-#five {
+/*#five {
 	background-attachment: fixed;
 	background-image: url("images/code2.webp");
 	background-position: top right;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-}
+}*/
 
 #six {
 	background-attachment: fixed;
@@ -131,6 +131,126 @@ img.one {
       overflow-y: scroll;
     }
 </style>
+
+
+<style>
+/* Background with smooth overlay */
+#four {
+  background: linear-gradient(to bottom right, #0d1b2a, #1b263b);
+  padding: 60px 20px;
+  color: #f1f1f1;
+}
+
+#four h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+/* Grid layout */
+.collaborators {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Each card */
+.collaborator-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.collaborator-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Links */
+.collaborator-card a {
+  color: #a8e6cf;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.collaborator-card a:hover {
+  color: #f9d56e;
+}
+</style>
+
+
+
+<style>
+/* Background */
+#five {
+  background: linear-gradient(to bottom right, #1a1a2e, #16213e);
+  padding: 60px 20px;
+  color: #f1f1f1;
+}
+
+#five h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* Grid layout */
+.codes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Each card */
+.code-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 25px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.code-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Link buttons */
+.code-card a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: #21e6c1;
+  color: #0d1b2a;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.code-card a:hover {
+  background: #f9d56e;
+  color: #0d1b2a;
+}
+</style>
+
+
+
+
+
+
 
 <script>
 // JavaScript code to pause and resume the animation
@@ -418,6 +538,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <br>
 
                     <li>
+                       <span style="color: #c9edb9"> (July 29, 2025) </span>
+                       <span style="color:WHITE">
+                         (Conference Talk) Presenting in and organizing a technical session on Bayesion Inference - International Conference on Monte Carlo Methods and Applications (MCM) - llinois Institute of Technology, Chicago, US
+                         <a href="https://fjhickernell.github.io/mcm2025/"
+                                 target="_blank" >https://fjhickernell.github.io/mcm2025/</a>
+                        </span>
+                    </li>
+
+                    <li>
                        <span style="color: #c9edb9"> (May 08, 2025) </span>
                        <span style="color:WHITE">
                          (Symposium) ISDA-Online: Open Session on Non-linear Data Assimilation
@@ -456,7 +585,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li>
                        <span style="color: #c9edb9"> (March 3-7, 2025) </span>
                        <span style="color:WHITE">
-                         (Presenting and organizing a minisymposium on Data Assimilation) SIAM Conference on Computational Science and Engineering (CSE25), Fort Worth, Texas, U.S.
+                         (Presenting in and organizing a minisymposium on Data Assimilation) SIAM Conference on Computational Science and Engineering (CSE25), Fort Worth, Texas, U.S.
                                  <a href="https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=82251"
                                          target="_blank" >https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=82251</a>
                         </span>
@@ -1130,88 +1259,123 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</section>
 
 
-				<!-- four -->
-				<section id="four" class="wrapper style1 fullscreen fade-up">
-						<div align="center"  id="grad1">
-							<h1>Collaborators</h1>
-							<div class="row">
-								<div class="col-6 col-12-medium">
-									<ul class="alt">
-										<span style="color: #c9edb9; font-weight:bold">
-											<li><a href="https://cemse.kaust.edu.sa/aanslab/people/person/aimad-er-raiy"
-												target="_blank" >Aimad Er-Raiy</a> (Airbus, France) </li>
-											<li><a href ="https://www.ucl.ac.uk/statistics/people/alexandrosbeskos"
-												target="_blank"  >Alexandros Beskos</a> (UCL, Statistics, UK) </li>
-											<li><a href ="https://www.ma.ic.ac.uk/~dcrisan/"
-												target="_blank"  >Dan Crisan</a> (Imperial, Mathematics, UK) </li>
-                      <li><a href= "https://people.bordeaux.inria.fr/pierre.delmoral/research.html"
-    												target="_blank"  >Pierre Del Moral</a> (INRIA, Bordeaux Research Center, France)</li>
-									 </span>
-									</ul>
-								</div>
-								<div class="col-6 col-12-medium">
-									<ul class="alt">
-										<span style="color: #c9edb9; font-weight:bold">
-
-                      <li><a href ="http://english.zuel.edu.cn/school/listm.htm"
-      										target="_blank"  >Shulan Hu </a> (Zhongnan University of Economics and Law, Statistics & Mathematics, China) </li>
-											<li><a href = "https://www.ma.imperial.ac.uk/~nkantas/"
-												target="_blank"  >Nikolas Kantas</a> (Imperial, Mathematics, UK) </li>
-											<li><a href="https://web.math.utk.edu/~schulze/"
-												target="_blank"  >Tim Schulze</a> (UTK, Mathematics, USA)</li>
-                      <li><a href ="http://english.zuel.edu.cn/school/listm.htm"
-        								target="_blank"  >Xinyu Wang </a> (Zhongnan University of Economics and Law, Business, China) </li>
-										</span>
-									</ul>
-								</div>
-						 </div>
-					 </div>
-				</section>
-
-				<!-- five -->
-				<section id="five" class="wrapper style1 fullscreen fade-up">
-						<div align="center" id="grad1">
-              <h1>Codes</h1>
-							<section>
-								<div class="table-wrapper">
-									<table>
-                    <tbody>
-
-                      <tr>
-												<td><a href="https://github.com/ruzayqat/score_based_par_est" target="_blank" class="button">Score-Based Parameter Estimation</a></td>
-											</tr>
-
-                      <tr>
-												<td><a href="https://github.com/ruzayqat/log_nc" target="_blank" class="button">Log-Normalizing Constants Estimation Using EnKBF</a></td>
-											</tr>
-
-                      <tr>
-												<td><a href="https://github.com/ruzayqat/log_mlenkbfnc" target="_blank" class="button">Log-Normalizing Constants Estimation Using Multilevel EnKBF</a></td>
-											</tr>
-
-                      <tr>
-												<td><a href="https://github.com/ruzayqat/laggedPF" target="_blank" class="button">Lagged Particle Filter for High-Dimensional Models</a></td>
-											</tr>
-
-                      <tr>
-												<td><a href="https://github.com/ruzayqat/unbiased_sfs" target="_blank" class="button">Unbiased estimation using a class of diffusion processes</a></td>
-											</tr>
-
-                      <tr>
-												<td><a href="https://github.com/ruzayqat/unbiased_uld" target="_blank" class="button">Unbiased estimation using underdamped Langevin dynamics</a></td>
-											</tr>
-
-                      <tr>
-												<td><a href="https://github.com/ruzayqat/filtering_unknown_data_locations" target="_blank" class="button">Sequential MCMC for Data Assimilation</a></td>
-											</tr>
-
-
-                    </tbody>
-                  </table>
-                </div>
-              </section>
+				<!-- Four -->
+        <section id="four" class="wrapper style1 fullscreen fade-up">
+          <h1>Collaborators</h1>
+          <div class="collaborators">
+            
+            <div class="collaborator-card">
+              <a href="https://cemse.kaust.edu.sa/aanslab/people/person/aimad-er-raiy" target="_blank">Aimad Er-Raiy</a>
+              <p>(Airbus, France)</p>
             </div>
-				</section>
+
+            <div class="collaborator-card">
+              <a href="https://www.ucl.ac.uk/statistics/people/alexandrosbeskos" target="_blank">Alexandros Beskos</a>
+              <p>(UCL, Statistics, UK)</p>
+            </div>
+
+            <div class="collaborator-card">
+              <a href="https://www.ma.ic.ac.uk/~dcrisan/" target="_blank">Dan Crisan</a>
+              <p>(Imperial, Mathematics, UK)</p>
+            </div>
+
+            <div class="collaborator-card">
+              <a href="https://scholar.google.com/citations?user=hJEdkhYAAAAJ&hl=en" target="_blank">George Turkiyyah</a>
+              <p>(KAUST, CEMSE, SA)</p>
+            </div>
+
+            <div class="collaborator-card">
+              <a href="https://people.bordeaux.inria.fr/pierre.delmoral/research.html" target="_blank">Pierre Del Moral</a>
+              <p>(INRIA, Bordeaux, France)</p>
+            </div>
+
+            <div class="collaborator-card">
+              <a href="https://scholar.google.com/citations?user=GNOopfAAAAAJ&hl=en" target="_blank">David Bolin</a>
+              <p>(KAUST, CEMSE, SA)</p>
+            </div>
+
+            <div class="collaborator-card">
+              <a href="http://english.zuel.edu.cn/school/listm.htm" target="_blank">Shulan Hu</a>
+              <p>(ZUEL, Statistics & Mathematics, China)</p>
+            </div>
+
+            <div class="collaborator-card">
+              <a href="https://www.ma.imperial.ac.uk/~nkantas/" target="_blank">Nikolas Kantas</a>
+              <p>(Imperial, Mathematics, UK)</p>
+            </div>
+
+            <div class="collaborator-card">
+              <a href="https://scholar.google.com/citations?user=KuvOKcwAAAAJ&hl=en" target="_blank">Omar Knio</a>
+              <p>(KAUST, CEMSE, SA)</p>
+            </div>
+
+            <div class="collaborator-card">
+              <a href="https://web.math.utk.edu/~schulze/" target="_blank">Tim Schulze</a>
+              <p>(UTK, Mathematics, USA)</p>
+            </div>
+
+            <div class="collaborator-card">
+              <a href="http://english.zuel.edu.cn/school/listm.htm" target="_blank">Xinyu Wang</a>
+              <p>(ZUEL, Business, China)</p>
+            </div>
+
+            <div class="collaborator-card">
+              <a href="https://scholar.google.com/citations?user=KsD9pdkAAAAJ&hl=en" target="_blank">Wenyu Lei</a>
+              <p>(UESTC, Mathematical Sciences, China)</p>
+            </div>
+
+          </div>
+        </section>
+
+				<!-- Five -->
+        <section id="five" class="wrapper style1 fullscreen fade-up">
+          <h1>Codes</h1>
+          <div class="codes">
+            
+            <div class="code-card">
+              <a href="https://github.com/ruzayqat/score_based_par_est" target="_blank">
+                Score-Based Parameter Estimation
+              </a>
+            </div>
+
+            <div class="code-card">
+              <a href="https://github.com/ruzayqat/log_nc" target="_blank">
+                Log-Normalizing Constants Estimation Using EnKBF
+              </a>
+            </div>
+
+            <div class="code-card">
+              <a href="https://github.com/ruzayqat/log_mlenkbfnc" target="_blank">
+                Log-Normalizing Constants Estimation Using Multilevel EnKBF
+              </a>
+            </div>
+
+            <div class="code-card">
+              <a href="https://github.com/ruzayqat/laggedPF" target="_blank">
+                Lagged Particle Filter for High-Dimensional Models
+              </a>
+            </div>
+
+            <div class="code-card">
+              <a href="https://github.com/ruzayqat/unbiased_sfs" target="_blank">
+                Unbiased Estimation Using a Class of Diffusion Processes
+              </a>
+            </div>
+
+            <div class="code-card">
+              <a href="https://github.com/ruzayqat/unbiased_uld" target="_blank">
+                Unbiased Estimation Using Underdamped Langevin Dynamics
+              </a>
+            </div>
+
+            <div class="code-card">
+              <a href="https://github.com/ruzayqat/filtering_unknown_data_locations" target="_blank">
+                Sequential MCMC for Data Assimilation
+              </a>
+            </div>
+
+          </div>
+        </section>
 
 
 				<!-- six-->
@@ -1231,6 +1395,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 										</thead>
 										<tbody>
 
+                      <tr>
+                        <td> 41. </td>
+                          <td>(July 29, 2025)</td>
+                          <td> (Conference Talk) Presenting in and organizing a technical session on Bayesion Inference - International Conference on Monte Carlo Methods and Applications (MCM) - llinois Institute of Technology</td>
+                          <td> Chicago, USA </td>
+                      </tr>
+
+                      <tr>
+                        <td> 40. </td>
+                          <td>(May 08, 2025)</td>
+                          <td> (Hybrid Symposium) ISDA-Online: Open Session on Non-linear Data Assimilation</td>
+                          <td> USA </td>
+                      </tr>
+
+
+                      <tr>
+                        <td> 39. </td>
+                          <td>(May 7-9, 2025)</td>
+                          <td> (Conference Talk) The 9th International Arab Conference on Mathematics and Computations, Zarqa University</td>
+                          <td> Zarqa, Jordan </td>
+                      </tr>
+
+                      <tr>
+                        <td> 38. </td>
+                          <td>(Feb 20-22, 2025)</td>
+                          <td> (Conference Talk) The Fourth International Conference on Mathematics and Statistics (ICMS25), American University of Sharjah</td>
+                          <td> Sharjah, UAE </td>
+                      </tr>
+
+                      <tr>
+                        <td> 37. </td>
+                          <td>(Feb 11, 2025)</td>
+                          <td> (Hybrid Seminar Talk) UQ Seminar, RWTH Aachen University</td>
+                          <td> Germany </td>
+                      </tr>
 
                       <tr>
                         <td> 36. </td>
