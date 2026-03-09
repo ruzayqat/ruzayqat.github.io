@@ -1,0 +1,513 @@
+/* ==========================================================================
+   Custom Styles for Hamza Ruzayqat's Personal Website
+   Consolidated & modernized from inline styles
+   ========================================================================== */
+
+/* ---------- Smooth scroll & base refinements ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+input,
+select,
+textarea {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif;
+}
+
+/* ---------- Gradient overlays ---------- */
+#grad {
+  background-image: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  border-radius: 12px;
+  padding: 40px 30px;
+}
+
+#grad1 {
+  background-image: linear-gradient(135deg, #0a1628, #1a3a5c);
+  opacity: 0.9;
+}
+
+#grad2 {
+  background-image: linear-gradient(135deg, #2d3e50, #7ba0c4);
+  opacity: 0.7;
+}
+
+#grad3 {
+  background-image: linear-gradient(135deg, #1a3a5c, #4a7a9b);
+  opacity: 0.15;
+}
+
+#grad4 {
+  background-image: linear-gradient(135deg, #0a1628, #1a3a5c);
+  opacity: 0.95;
+  border-radius: 12px;
+  padding: 40px 20px;
+}
+
+#grad5 {
+  background-image: linear-gradient(135deg, #e8ecf1, #f4f6f8);
+  opacity: 0.96;
+  border-radius: 12px;
+  padding: 40px 20px;
+}
+
+/* ---------- Background images (with mobile fix) ---------- */
+#six {
+  background-image: url("../images/blue_bg.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#eight {
+  background-image: url("../images/BB.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Fix: background-attachment:fixed causes perf issues on mobile */
+@supports (background-attachment: fixed) {
+  @media (min-width: 769px) {
+
+    #six,
+    #eight {
+      background-attachment: fixed;
+    }
+  }
+}
+
+/* ---------- "Recent News" animated heading ---------- */
+@keyframes tipsy {
+  0% {
+    transform: translateX(-7%) translateY(-7%) rotate(0deg);
+  }
+
+  100% {
+    transform: translateX(-7%) translateY(-7%) rotate(360deg);
+  }
+}
+
+a1 {
+  color: #fffbf1;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+}
+
+/* ---------- Scrollable news list ---------- */
+.scrollable-list {
+  max-height: 420px;
+  overflow-y: auto;
+  padding-right: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
+}
+
+.scrollable-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollable-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollable-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 3px;
+}
+
+.scrollable-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.scrollable-list li {
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  border-left: 3px solid #64b5f6;
+  transition: background 0.3s ease, transform 0.2s ease;
+  line-height: 1.6;
+}
+
+.scrollable-list li:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateX(4px);
+}
+
+.news-date {
+  color: #81d4a8;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.news-text {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.92em;
+}
+
+.news-text a {
+  color: #90caf9;
+  word-break: break-all;
+}
+
+.news-text a:hover {
+  color: #fff;
+}
+
+/* ---------- Grid content rows (Research section) ---------- */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.column {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.column.images {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.column.content {
+  flex: 1 1 60%;
+  text-align: left;
+}
+
+.responsive-image {
+  max-width: 95%;
+  max-height: 500px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .column {
+    flex: 1 1 100%;
+  }
+
+  .column.images {
+    margin-bottom: 20px;
+  }
+}
+
+/* ---------- Publication list ---------- */
+.publication-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.publication-list li {
+  margin: 10px 0;
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  border-left: 3px solid #64b5f6;
+  transition: transform 0.3s, background-color 0.3s;
+  line-height: 1.7;
+}
+
+.publication-list li:hover {
+  transform: translateX(6px);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.publication-list .authors {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+}
+
+.publication-list .title {
+  color: #ffd54f;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.publication-list .button {
+  margin-top: 5px;
+  text-decoration: none;
+  color: #ffffff;
+  background: linear-gradient(135deg, #1e88e5, #42a5f5);
+  padding: 5px 14px;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.2s;
+  display: inline-block;
+  font-size: 13px;
+  border-bottom: none;
+}
+
+.publication-list .button:hover {
+  background: linear-gradient(135deg, #1565c0, #1e88e5);
+  transform: translateY(-1px);
+  color: #ffffff;
+}
+
+/* ---------- Journal logos grid ---------- */
+.grid-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  margin-top: 30px;
+}
+
+.grid-item {
+  flex: 0 0 calc(16.66% - 10px);
+  max-width: calc(16.66% - 10px);
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.grid-item:hover {
+  transform: scale(1.06);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+  .grid-item {
+    flex: 0 0 calc(33.33% - 10px);
+    max-width: calc(33.33% - 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-item {
+    flex: 0 0 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+}
+
+/* ---------- Collaborators section ---------- */
+#four {
+  background: linear-gradient(135deg, #0d1b2a, #1b2d45);
+  padding: 60px 20px;
+  color: #f1f1f1;
+}
+
+#four h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.collaborators {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.collaborator-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.collaborator-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(100, 181, 246, 0.3);
+}
+
+.collaborator-card a {
+  color: #81d4a8;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+  border-bottom: none;
+}
+
+.collaborator-card a:hover {
+  color: #ffd54f;
+}
+
+.collaborator-card p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85em;
+  margin-top: 4px;
+}
+
+/* ---------- Codes section ---------- */
+#five {
+  background: linear-gradient(135deg, #141e30, #1a2940);
+  padding: 60px 20px;
+  color: #f1f1f1;
+}
+
+#five h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.codes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.code-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 25px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.code-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(100, 181, 246, 0.3);
+}
+
+.code-card a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #00897b, #26a69a);
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-bottom: none;
+}
+
+.code-card a:hover {
+  background: linear-gradient(135deg, #00695c, #00897b);
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+/* ---------- Research subsections ---------- */
+.bg-color-1,
+.research-section-a {
+  background: linear-gradient(135deg, #1a3a5c, #2a5a7c) !important;
+}
+
+.bg-color-2,
+.research-section-b {
+  background: linear-gradient(135deg, #1b2d45, #1a3a5c) !important;
+}
+
+.research-note {
+  font-family: 'Inter', Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 10px 20px;
+  padding: 12px 16px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  border-left: 3px solid rgba(100, 181, 246, 0.4);
+}
+
+/* ---------- Mobile-responsive tables ---------- */
+@media screen and (max-width: 768px) {
+  .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table-wrapper table {
+    min-width: 600px;
+  }
+
+  .scrollable-list {
+    max-height: 320px;
+  }
+
+  a1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #grad {
+    padding: 20px 12px;
+  }
+
+  #grad4 {
+    padding: 20px 10px;
+  }
+
+  #grad5 {
+    padding: 20px 10px;
+  }
+
+  .publication-list li {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+
+  .collaborators {
+    grid-template-columns: 1fr;
+  }
+
+  .codes {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Fade-in animation ---------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.6s ease forwards;
+}
