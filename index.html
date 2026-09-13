@@ -1,1607 +1,817 @@
-<!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-M72F783R');</script>
   <!-- End Google Tag Manager -->
 
-  <script type="text/javascript">
-    MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
-      },
-      options: {
-        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-      }
-    };
-  </script>
-  <script type="text/javascript" id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-
-  <title>Hamza Ruzayqat — Research Scientist | KAUST</title>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hamza Ruzayqat — Research Scientist, KAUST</title>
   <meta name="description"
-    content="Personal website of Hamza Ruzayqat, Research Scientist at KAUST. Research in Monte Carlo methods, data assimilation, Bayesian inference, and uncertainty quantification." />
+    content="Hamza Ruzayqat, Research Scientist at KAUST. Monte Carlo methods, data assimilation, Bayesian inference, spatial statistics and uncertainty quantification." />
+  <meta property="og:title" content="Hamza Ruzayqat — Research Scientist, KAUST" />
+  <meta property="og:description"
+    content="Monte Carlo methods, data assimilation, Bayesian inference and uncertainty quantification." />
+  <meta property="og:image" content="https://ruzayqat.github.io/images/web/fig-feature.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="stylesheet" href="assets/css/custom.css" />
-  <noscript>
-    <link rel="stylesheet" href="assets/css/noscript.css" />
-  </noscript>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css?v=8" />
 </head>
 
-
-<body class="is-preload">
+<body>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M72F783R" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
-  <!-- Sidebar -->
+  <!-- SVG icon sprites -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-github" viewBox="0 0 16 16">
+      <path
+        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+    </symbol>
+    <symbol id="i-linkedin" viewBox="0 0 16 16">
+      <path
+        d="M0 1.15C0 .52.52 0 1.17 0h13.66C15.48 0 16 .52 16 1.15v13.7c0 .63-.52 1.15-1.17 1.15H1.17C.52 16 0 15.48 0 14.85V1.15zM4.94 13.4V6.17h-2.4v7.23h2.4zM3.74 5.18c.84 0 1.36-.55 1.36-1.25-.02-.71-.52-1.25-1.34-1.25-.82 0-1.36.54-1.36 1.25 0 .7.52 1.25 1.33 1.25h.01zM8.66 13.4V9.36c0-.22.02-.43.08-.59.17-.43.57-.88 1.23-.88.87 0 1.22.66 1.22 1.64v3.87h2.4V9.25c0-2.22-1.18-3.25-2.76-3.25-1.28 0-1.84.7-2.16 1.2V6.17h-2.4c.03.68 0 7.23 0 7.23h2.4z" />
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 16 16">
+      <path
+        d="M.05 3.55A2 2 0 012 2h12a2 2 0 011.95 1.55L8 8.42.05 3.55zM0 4.7v7.1l5.8-3.55L0 4.7zm6.76 4.13L.19 12.86A2 2 0 002 14h12a2 2 0 001.81-1.14L9.24 8.83 8 9.58l-1.24-.75zm3.44-.58L16 11.8V4.7l-5.8 3.55z" />
+    </symbol>
+    <symbol id="i-scholar" viewBox="0 0 24 24">
+      <path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zm-6.82 9.5v4L12 20l6.82-3.5v-4L12 16l-6.82-3.5z" />
+    </symbol>
+    <symbol id="i-doc" viewBox="0 0 16 16">
+      <path
+        d="M4 0h5.3a1 1 0 01.7.3l3.7 3.7a1 1 0 01.3.7V14a2 2 0 01-2 2H4a2 2 0 01-2-2V2a2 2 0 012-2zm5 1.5V4a1 1 0 001 1h2.5L9 1.5zM5 8a.5.5 0 000 1h6a.5.5 0 000-1H5zm0 2a.5.5 0 000 1h6a.5.5 0 000-1H5zm0 2a.5.5 0 000 1h4a.5.5 0 000-1H5z" />
+    </symbol>
+  </svg>
 
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a class="brand" href="#top">Hamza Ruzayqat</a>
+      <ul>
+        <li><a class="link" href="#about">About</a></li>
+        <li><a class="link" href="#research">Research</a></li>
+        <li><a class="link" href="#publications">Publications</a></li>
+        <li><a class="link" href="#software">Software</a></li>
+        <li><a class="link" href="#talks">Talks</a></li>
+        <li><a class="link" href="#teaching">Teaching</a></li>
+        <li><a class="link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-
-
-
-
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M72F783R" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-  <!-- Sidebar -->
-  <section id="sidebar">
-    <div class="inner">
-      <nav>
-        <ul>
-          <li><a href="#intro">Welcome</a></li>
-          <li><a href="#one">Who I am</a></li>
-          <li><a href="#two">Research</a></li>
-          <li><a href="#three">Publications</a></li>
-          <li><a href="#four">Collaborators</a></li>
-          <li><a href="#five">Code</a></li>
-          <li><a href="#six">Talks</a></li>
-          <!-- <li><a href="#seven">Work Experience</a></li> -->
-          <li><a href="#eight">Teaching</a></li>
-          <li><a href="#contactme">Contact Me</a></li>
+  <!-- Hero -->
+  <header class="hero" id="top">
+    <div class="container">
+      <div>
+        <div class="eyebrow">Stochastic Differential Equations &middot; Data Assimilation &middot; Spatial Statistics</div>
+        <div class="identity">
+          <img class="headshot" src="images/web/headshot.jpg" alt="Hamza Ruzayqat" width="180" height="180" />
+          <div>
+            <h1>Hamza Ruzayqat</h1>
+            <div class="role">Research Scientist, King Abdullah University of Science and Technology (KAUST)</div>
+          </div>
+        </div>
+        <p class="pitch">
+          I design and analyse Monte Carlo and stochastic algorithms that turn noisy, partial observations of complex
+          systems into reliable inference with quantified uncertainty. My work centres on three connected themes:
+        </p>
+        <ul class="themes">
+          <li><strong>Inference for stochastic differential equations</strong>: unbiased and multilevel estimators, and
+            fast learning of both the drift and diffusion terms of SDEs from noisy partial data (WAIVES, forthcoming).</li>
+          <li><strong>Data assimilation</strong>: sequential MCMC, localization and lagged particle filters for
+            high-dimensional, nonlinear, non-Gaussian geophysical models.</li>
+          <li><strong>Spatial statistics</strong>: Whittle&ndash;Matérn random fields with spatially varying smoothness,
+            with efficient sampling in one and two dimensions.</li>
         </ul>
-      </nav>
+        <div class="actions">
+          <a class="btn btn-primary" href="#research">Explore my research</a>
+          <a class="btn btn-ghost" href="#publications"><svg><use href="#i-doc" /></svg>Publications</a>
+          <a class="btn btn-ghost" href="https://scholar.google.com/citations?user=zThjU94AAAAJ&amp;hl=en" target="_blank" rel="noopener"><svg><use href="#i-scholar" /></svg>Google Scholar</a>
+          <a class="btn btn-ghost" href="https://github.com/ruzayqat" target="_blank" rel="noopener"><svg>
+              <use href="#i-github" />
+            </svg>GitHub</a>
+        </div>
+      </div>
+
+      <figure class="hero-media" style="margin:0">
+        <video autoplay muted loop playsinline preload="auto" width="800" height="514" poster="images/web/lsmcmc_poster.jpg" aria-label="Animation of local sequential MCMC assimilating drifter and SWOT observations in the North Atlantic">
+          <source src="images/web/lsmcmc_animation.mp4" type="video/mp4" />
+          <img src="images/web/lsmcmc_animation.gif" alt="Animation of local sequential MCMC assimilating drifter and SWOT observations in the North Atlantic" />
+        </video>
+        <figcaption>Local Sequential MCMC assimilating real drifter and SWOT satellite observations of the North
+          Atlantic (Aug 2024).</figcaption>
+      </figure>
+    </div>
+
+    <div class="container">
+      <div class="stats">
+        <div class="stat"><b><span data-count="journal">16</span><span class="sep">+</span><span data-count="preprint">3</span></b><span>articles in top numerical &amp; applied mathematics journals + preprints</span></div>
+        <div class="stat"><b data-count="talks">42</b><span>invited &amp; conference talks</span></div>
+        <div class="stat"><b data-count="collab">16</b><span>international collaborators</span></div>
+        <div class="stat"><b data-count="repos">8</b><span>open-source research codes</span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About + News -->
+  <section class="block" id="about">
+    <div class="container about">
+
+      <div class="bio">
+        <span class="kicker">About</span>
+        <h2>Hello!</h2>
+        <p>
+          I am a Research Scientist at <a href="https://www.kaust.edu.sa/en" target="_blank" rel="noopener">KAUST</a>
+          (CEMSE Division), where I previously held a postdoctoral position (2019&ndash;2022). My work sits at the
+          intersection of computational statistics, stochastic analysis and geophysical modelling.
+        </p>
+        <p>
+          I collaborate with groups at Imperial College London, UCL, INRIA, the University of Colorado Boulder, Florida State University and KAUST, and I
+          release open-source implementations of my methods.
+        </p>
+        <ul class="edu">
+          <li><b>PhD &amp; M.S. in Mathematics</b> &mdash; University of Tennessee, Knoxville, 2019</li>
+          <li><b>B.S. in Physics &amp; Mathematics</b> &mdash; Birzeit University, Palestine, 2012</li>
+        </ul>
+      </div>
+
+      <div class="news">
+        <h3>Recent news</h3>
+        <ul>
+          <li><time>Jan 2027</time>
+            <div><span class="tag gold">Upcoming</span>Presenting at the 31st Conference on Integrated Observing and Assimilation Systems for the Atmosphere, Oceans, and Land Surface (IOAS-AOLS), AMS Annual Meeting, Denver, CO (Jan 10&ndash;14, 2027).</div>
+          </li>
+          <li><time>Dec 2026</time>
+            <div><span class="tag gold">Upcoming</span>Co-organizing (with Vanja Dukic) a minisymposium on Inference in Stochastic Differential Equations at CFE-CMStatistics 2026, HTW Berlin (Dec 12&ndash;14, 2026).
+              <a href="https://www.cmstatistics.org/CFECMStatistics2026/" target="_blank" rel="noopener">Conference</a></div>
+          </li>
+          <li class="highlight"><time>Sep 2026</time>
+            <div><span class="tag gold">Accepted</span>"Two Localization Strategies for Sequential MCMC Data
+              Assimilation with Applications to Nonlinear Non-Gaussian Geophysical Models" to appear in the
+              <em>Journal of Advances in Modeling Earth Systems (JAMES)</em>.
+              <a href="https://arxiv.org/abs/2603.05817" target="_blank" rel="noopener">arXiv</a>
+            </div>
+          </li>
+          <li><time>May 2026</time>
+            <div><span class="tag">Seminar</span>Department of Applied Mathematics (APPM), University of Colorado Boulder: learning SDEs from noisy partial data.</div>
+          </li>
+          <li><time>May 2026</time>
+            <div><span class="tag">Invited</span>54th Barrett Lectures, University of Tennessee, Knoxville.
+              <a href="https://math.utk.edu/barrett/54th-lectures/" target="_blank" rel="noopener">Event</a></div>
+          </li>
+          <li><time>Mar 2026</time>
+            <div><span class="tag">Preprint</span>Two Localization Strategies for Sequential MCMC Data Assimilation.
+              <a href="https://arxiv.org/abs/2603.05817" target="_blank" rel="noopener">arXiv:2603.05817</a></div>
+          </li>
+          <li><time>Feb 2026</time>
+            <div><span class="tag">Preprint</span>Whittle&ndash;Matérn Fields with Variable Smoothness.
+              <a href="https://arxiv.org/abs/2602.16581" target="_blank" rel="noopener">arXiv:2602.16581</a></div>
+          </li>
+          <li><time>Nov 2025</time>
+            <div><span class="tag">Workshop</span>KAUST 2025 Workshop on Statistics: Whittle&ndash;Matérn fields with
+              variable smoothness.
+              <a href="https://cemse.kaust.edu.sa/events/by-type/workshop/2025/11/02/kaust-2025-workshop-statistics"
+                target="_blank" rel="noopener">Event</a></div>
+          </li>
+          <li><time>Jul 2025</time>
+            <div><span class="tag">Conference</span>Speaker and session organizer (Bayesian Inference), MCM 2025, Illinois
+              Institute of Technology, Chicago.
+              <a href="https://fjhickernell.github.io/mcm2025/" target="_blank" rel="noopener">Event</a></div>
+          </li>
+        </ul>
+        <details class="more">
+          <summary>Older news</summary>
+          <ul>
+            <li><time>May 2025</time>
+              <div><span class="tag">Conference</span>ISDA-Online: Open Session on Non-linear Data Assimilation.
+                <a href="https://isda-online.univie.ac.at/online-events/may-2025-non-linear-data-assimilation/"
+                  target="_blank" rel="noopener">Event</a></div>
+            </li>
+            <li><time>May 2025</time>
+              <div><span class="tag">Conference</span>9th International Arab Conference on Mathematics and Computations,
+                Zarqa University, Jordan. <a href="https://conf.zu.edu.jo/iacmc/" target="_blank"
+                  rel="noopener">Event</a></div>
+            </li>
+            <li><time>Mar 2025</time>
+              <div><span class="tag">Conference</span>Speaker and minisymposium organizer (Data Assimilation), SIAM CSE25,
+                Fort Worth, TX. <a href="https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=82251"
+                  target="_blank" rel="noopener">Session</a></div>
+            </li>
+            <li><time>Feb 2025</time>
+              <div><span class="tag">Seminar</span>Department of Mathematics, Texas A&amp;M University.</div>
+            </li>
+            <li><time>Feb 2025</time>
+              <div><span class="tag">Colloquium</span>Department of Scientific Computing, Florida State University.
+              </div>
+            </li>
+            <li><time>Feb 2025</time>
+              <div><span class="tag">Conference</span>ICMS25, American University of Sharjah, UAE.</div>
+            </li>
+            <li><time>Feb 2025</time>
+              <div><span class="tag">Seminar</span>UQ Seminar, RWTH Aachen University, Germany (hybrid).</div>
+            </li>
+            <li><time>Dec 2024</time>
+              <div><span class="tag">Conference</span>14th AIMS Conference on Dynamical Systems, NYU Abu Dhabi; MathConnect
+                2024, KFUPM.</div>
+            </li>
+            <li><time>Sep 2024</time>
+              <div><span class="tag">Preprint</span>Local Sequential MCMC for Data Assimilation with Applications in
+                Geoscience. <a href="https://arxiv.org/abs/2409.07111" target="_blank"
+                  rel="noopener">arXiv:2409.07111</a></div>
+            </li>
+            <li><time>Mar 2024</time>
+              <div><span class="tag">Seminar</span>Department of Statistics and Data Science, Washington University in
+                St. Louis.</div>
+            </li>
+            <li><time>Jan 2024</time>
+              <div><span class="tag">Invited</span>ISE Department, University of Illinois Urbana-Champaign.</div>
+            </li>
+          </ul>
+        </details>
+      </div>
     </div>
   </section>
 
-  <!-- Wrapper -->
-  <div id="wrapper">
+  <!-- Research -->
+  <section class="block soft" id="research">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Research</span>
+          <h2>Research highlights</h2>
+        </div>
+        <p>Selected results across my research: inference for stochastic differential equations, data assimilation,
+          spatial statistics and Bayesian inverse problems. The common thread is stochastic algorithms with provable
+          properties, such as convergence, unbiasedness or stability with respect to dimension, that remain
+          computationally practical for realistic models.</p>
+      </div>
 
-    <!-- Intro -->
-    <section id="intro" class="wrapper style1 fullscreen fade-up">
-      <div class="inner">
-        <h1>Welcome</h1>
-        <ul class="actions">
-          <li><a href="#one" class="button scrolly">Learn more</a></li>
+      <div class="feature">
+        <figure class="feature-media" style="margin:0">
+          <img src="images/web/fig-feature.jpg" alt="North Atlantic sea-surface height, velocity and temperature reconstructed by localized sequential MCMC versus HYCOM reanalysis" loading="lazy" />
+          <figcaption>Real-data experiment (JAMES, to appear): localized sequential MCMC assimilates real drifter velocity and
+            temperature observations and SWOT sea-surface height into a three-layer shallow-water model of the North
+            Atlantic (state dimension 67,200) over 240 cycles, starting from the HYCOM state at the initial time with
+            added noise. Columns: analysis at the first cycle (left) and final cycle (centre), and the HYCOM reanalysis
+            at the final time (right). Rows: sea-surface height, eastward and northward velocity, temperature.</figcaption>
+        </figure>
+        <div>
+          <span class="kicker">Data assimilation</span>
+          <h3>Sequential MCMC for high-dimensional geophysical filtering</h3>
+          <p>
+            Ensemble Kalman methods are fast but rely on linear&ndash;Gaussian approximations, while standard particle
+            filters suffer from weight degeneracy in high dimensions. Sequential MCMC avoids importance weights altogether
+            and is provably convergent. My localized variants restrict the MCMC updates to observed regions, reducing the
+            effective dimension, and have been applied to nonlinear, non-Gaussian models with 10<sup>4</sup>&ndash;10<sup>5</sup>
+            state variables.
+          </p>
+          <div class="chips">
+            <span class="chip">Sequential MCMC</span><span class="chip">Localization</span>
+            <span class="chip">Particle filters</span><span class="chip">Ocean models</span>
+          </div>
+          <p class="paper-ref">JAMES (to appear, 2026) &middot; Q. J. R. Meteorol. Soc. (2024) &middot; SIAM/ASA
+            JUQ (2022)</p>
+        </div>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="thumb"><img src="images/web/fig-localization.png" alt="Two localization strategies"
+              loading="lazy" /></div>
+          <div class="body">
+            <h4>Localization for sequential MCMC</h4>
+            <p>Two localized versions of sequential MCMC: one updates all observed blocks jointly with parallel chains, the
+              other updates each observed block independently with a halo around it. For linear&ndash;Gaussian
+              observations the analysis can be sampled exactly.</p>
+            <p class="paper-ref"><a href="https://arxiv.org/abs/2603.05817" target="_blank" rel="noopener">JAMES, to
+                appear</a></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb"><img src="images/web/fig-swe.jpg" alt="Shallow-water height fields: signal vs lagged particle filter vs ensemble Kalman filters" loading="lazy" />
+          </div>
+          <div class="body">
+            <h4>Lagged particle filtering</h4>
+            <p>A lag approximation whose bias is controlled uniformly in the dimension. Pictured: shallow-water height; averaged
+              over 50 runs, the LPF with 100 particles stays closer to the true signal than EnKF, ETKF and square-root ETKF
+              with 1000 ensemble members.</p>
+            <p class="paper-ref"><a href="https://arxiv.org/abs/2110.00884" target="_blank" rel="noopener">SIAM/ASA
+                J. Uncertain. Quantif.</a></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb"><img src="images/web/fig-card3.jpg" alt="Ocean velocity and height fields estimated from drifter observations" loading="lazy" /></div>
+          <div class="body">
+            <h4>Lagrangian data assimilation</h4>
+            <p>Sequential MCMC for filtering from drifting observers, including a real-data case with 12 NOAA drifters whose
+              locations are treated as unknown. Pictured: true signal, filter mean and error for a shallow-water model
+              with known drifter locations.</p>
+            <p class="paper-ref"><a href="https://arxiv.org/abs/2305.00484" target="_blank" rel="noopener">Q. J. R. Meteorol. Soc., 2024</a></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb"><img src="images/web/fig-card4.jpg" alt="Posterior mean of a log-permeability field: pCN-MCMC vs single-level and unbiased Schrödinger–Föllmer samplers" loading="lazy" /></div>
+          <div class="body">
+            <h4>Unbiased &amp; multilevel Monte Carlo</h4>
+            <p>Randomized estimators that remove both time-discretization and drift-approximation bias of the
+              Schr&ouml;dinger&ndash;F&ouml;llmer sampler. Pictured: log-permeability in an elliptic PDE inverse problem;
+              the unbiased sampler reaches the same RMSE in about 33.5&nbsp;h versus 168&nbsp;h.</p>
+            <p class="paper-ref"><a href="https://arxiv.org/abs/2203.03013" target="_blank" rel="noopener">J. Comput. Phys., 2023</a> &middot; <a href="https://arxiv.org/abs/2206.07202" target="_blank" rel="noopener">SIAM J. Sci. Comput., 2023</a></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb"><img src="images/anomaly_detect.jpg" alt="Bayesian anomaly detection" loading="lazy" />
+          </div>
+          <div class="body">
+            <h4>Bayesian inverse problems</h4>
+            <p>Recovering the location, shape, fractional order and diffusivity of hidden anomalies in
+              variable-order fractional media from noisy measurements.</p>
+            <p class="paper-ref">Preprint, 2025</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb"><img src="images/web/fig-card6.jpg" alt="Sample covariance surfaces of Whittle–Matérn fields with spatially varying smoothness" loading="lazy" /></div>
+          <div class="body">
+            <h4>Spatial statistics: variable smoothness</h4>
+            <p>Whittle–Matérn random fields whose smoothness varies over space, so a single Gaussian model can be rough in some regions and smooth in others.</p>
+            <p class="paper-ref"><a href="https://arxiv.org/abs/2602.16581" target="_blank" rel="noopener">Preprint, 2026</a></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section class="block" id="publications">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Publications</span>
+          <h2>Papers &amp; preprints</h2>
+        </div>
+        <p>In SIAM journals, J. Comput. Phys., QJRMS, Mathematics of Computation, JAMES, Statistics and Computing, and
+          others.</p>
+      </div>
+
+      <div class="pub-group">
+        <h3>Journal articles</h3>
+        <ul class="pubs" data-group="journal">
+          <li><span class="yr">2026</span>
+            <div><span class="title">Two Localization Strategies for Sequential MCMC Data Assimilation with
+                Applications to Nonlinear Non-Gaussian Geophysical Models</span>
+              <span class="authors"><b>Ruzayqat, H.</b>, Chipilski, H. G. &amp; Knio, O.</span>
+              <span class="venue soon">Journal of Advances in Modeling Earth Systems (JAMES), to appear</span>
+            </div><a class="pdf" href="https://arxiv.org/pdf/2603.05817" target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li><span class="yr">2025</span>
+            <div><span class="title">On Time Uniform Wong&ndash;Zakai Approximation Theorems</span>
+              <span class="authors">Del Moral, P., Hu, S., Jasra, A., <b>Ruzayqat, H.</b> &amp; Wang, X.</span>
+              <span class="venue soon">Mathematics of Computation, to appear</span>
+            </div><a class="pdf" href="https://arxiv.org/pdf/2310.04967" target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li><span class="yr">2024</span>
+            <div><span class="title">Bayesian Parameter Inference for Partially Observed Diffusions using Multilevel
+                Stochastic Runge&ndash;Kutta Methods</span>
+              <span class="authors">Del Moral, P., Hu, S., Jasra, A., <b>Ruzayqat, H.</b> &amp; Wang, X.</span>
+              <span class="venue">International Journal for Uncertainty Quantification, 15(2), 1&ndash;18</span>
+            </div><a class="pdf" href="https://arxiv.org/pdf/2309.13557" target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li><span class="yr">2024</span>
+            <div><span class="title">Unbiased and Multilevel Methods for a Class of Diffusions Partially Observed via
+                Marked Point Processes</span>
+              <span class="authors">Alvarez, M., Jasra, A. &amp; <b>Ruzayqat, H.</b></span>
+              <span class="venue">Statistics and Computing, 34(198)</span>
+            </div><a class="pdf" href="https://arxiv.org/pdf/2311.09875" target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li><span class="yr">2024</span>
+            <div><span class="title">Unbiased Parameter Estimation for Partially Observed Diffusions</span>
+              <span class="authors">Awadelkarim, E., Jasra, A. &amp; <b>Ruzayqat, H.</b></span>
+              <span class="venue">SIAM Journal on Control and Optimization, 62(5), 2664&ndash;2694</span>
+            </div><a class="pdf" href="https://arxiv.org/pdf/2309.10589" target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li><span class="yr">2024</span>
+            <div><span class="title">Sequential Markov Chain Monte Carlo for Lagrangian Data Assimilation with
+                Applications to Unknown Data Locations</span>
+              <span class="authors"><b>Ruzayqat, H.</b>, Beskos, A., Crisan, D., Jasra, A. &amp; Kantas, N.</span>
+              <span class="venue">Quarterly Journal of the Royal Meteorological Society, 150(761),
+                2418&ndash;2439</span>
+            </div><a class="pdf" href="https://arxiv.org/pdf/2305.00484" target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li><span class="yr">2023</span>
+            <div><span class="title">Bayesian Parameter Inference for Partially Observed Stochastic Volterra
+                Equations</span>
+              <span class="authors">Jasra, A., <b>Ruzayqat, H.</b> &amp; Wu, A.</span>
+              <span class="venue">Statistics and Computing, 34(2), 1&ndash;12</span>
+            </div><a class="pdf" href="https://arxiv.org/pdf/2310.03114" target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li><span class="yr">2023</span>
+            <div><span class="title">Unbiased Estimation using Underdamped Langevin Dynamics</span>
+              <span class="authors"><b>Ruzayqat, H.</b>, Chada, N. K. &amp; Jasra, A.</span>
+              <span class="venue">SIAM Journal on Scientific Computing, 45(6), A3047&ndash;A3070</span>
+            </div><a class="pdf" href="https://arxiv.org/pdf/2206.07202" target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li><span class="yr">2023</span>
+            <div><span class="title">Unbiased Estimation using a Class of Diffusion Processes</span>
+              <span class="authors"><b>Ruzayqat, H.</b>, Beskos, A., Crisan, D., Jasra, A. &amp; Kantas, N.</span>
+              <span class="venue">Journal of Computational Physics, 472, 111643</span>
+            </div><a class="pdf" href="https://arxiv.org/pdf/2203.03013" target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li><span class="yr">2022</span>
+            <div><span class="title">Log-Normalization Constant Estimation using the Ensemble Kalman&ndash;Bucy Filter
+                with Application to High-Dimensional Models</span>
+              <span class="authors">Crisan, D., Del Moral, P., Jasra, A. &amp; <b>Ruzayqat, H.</b></span>
+              <span class="venue">Advances in Applied Probability, 54(4), 1139&ndash;1163</span>
+            </div><a class="pdf" href="https://arxiv.org/pdf/2101.11460" target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li><span class="yr">2022</span>
+            <div><span class="title">Unbiased Parameter Inference for a Class of Partially Observed Lévy-Process
+                Models</span>
+              <span class="authors"><b>Ruzayqat, H.</b> &amp; Jasra, A.</span>
+              <span class="venue">Foundations of Data Science, 4(2), 299&ndash;322</span>
+            </div><a class="pdf" href="https://arxiv.org/pdf/2112.13874" target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li><span class="yr">2022</span>
+            <div><span class="title">A Lagged Particle Filter for Stable Filtering of Certain High-Dimensional
+                State-Space Models</span>
+              <span class="authors"><b>Ruzayqat, H.</b>, Er-Raiy, A., Beskos, A., Crisan, D., Jasra, A. &amp; Kantas,
+                N.</span>
+              <span class="venue">SIAM/ASA Journal on Uncertainty Quantification, 10(3), 1130&ndash;1161</span>
+            </div><a class="pdf" href="https://arxiv.org/pdf/2110.00884" target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li><span class="yr">2022</span>
+            <div><span class="title">Multilevel Estimation of Normalization Constants Using the Ensemble
+                Kalman&ndash;Bucy Filter</span>
+              <span class="authors"><b>Ruzayqat, H.</b>, Chada, N. K. &amp; Jasra, A.</span>
+              <span class="venue">Statistics and Computing, 32(38)</span>
+            </div><a class="pdf" href="https://arxiv.org/pdf/2108.03935" target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li><span class="yr">2021</span>
+            <div><span class="title">Score-Based Parameter Estimation for a Class of Continuous-Time State Space
+                Models</span>
+              <span class="authors">Beskos, A., Crisan, D., Jasra, A., Kantas, N. &amp; <b>Ruzayqat, H.</b></span>
+              <span class="venue">SIAM Journal on Scientific Computing, 43(4), A2555&ndash;A2580</span>
+            </div><a class="pdf" href="https://arxiv.org/pdf/2008.07803" target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li><span class="yr">2020</span>
+            <div><span class="title">Unbiased Estimation of the Solution to Zakai's Equation</span>
+              <span class="authors"><b>Ruzayqat, H.</b> &amp; Jasra, A.</span>
+              <span class="venue">Monte Carlo Methods and Applications, 26(2), 113&ndash;129</span>
+            </div><a class="pdf" href="https://arxiv.org/pdf/2002.01270" target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li><span class="yr">2018</span>
+            <div><span class="title">A Rejection Scheme for Off-Lattice Kinetic Monte Carlo Simulation</span>
+              <span class="authors"><b>Ruzayqat, H. M.</b> &amp; Schulze, T. P.</span>
+              <span class="venue">Journal of Chemical Theory and Computation, 14(1), 48&ndash;54</span>
+            </div><a class="pdf" href="https://web.math.utk.edu/~schulze/paper33.pdf" target="_blank"
+              rel="noopener">PDF</a>
+          </li>
         </ul>
       </div>
-      <div class="inner">
-        <p>
-          <a1>Recent News</a1>
 
-        <div class="scrollable-list">
-
-          <ul>
-
-            <li>
-              <span class="news-date">(Mar 2026)</span>
-              <span class="news-text">
-                New preprint: "Two Localization Strategies for Sequential MCMC Data Assimilation with Applications to
-                Nonlinear Non-Gaussian Geophysical Models"
-                <a href="https://arxiv.org/pdf/2603.05817" target="_blank">arXiv:2603.05817</a>
-              </span>
-            </li>
-
-            <li>
-              <span class="news-date">(Feb 2026)</span>
-              <span class="news-text">
-                New preprint: "Whittle-Matérn Fields with Variable Smoothness"
-                <a href="https://arxiv.org/pdf/2602.16581" target="_blank">arXiv:2602.16581</a>
-              </span>
-            </li>
-
-            <li>
-              <span class="news-date">(May 20, 2026)</span>
-              <span class="news-text">
-                (Invited Talk) 2026 Barrett Lectures at the University of Tennessee, Knoxville
-                <a href="https://math.utk.edu/barrett/54th-lectures/" target="_blank">54th Barrett Lectures</a>
-              </span>
-            </li>
-
-            <li>
-              <span class="news-date">(Nov 5, 2025)</span>
-              <span class="news-text">
-                (Workshop Talk) Presenting in KAUST 2025 Workshop on Statistics on Whittle-Matérn fields with variable
-                smoothness.
-                <a href="https://cemse.kaust.edu.sa/events/by-type/workshop/2025/11/02/kaust-2025-workshop-statistics"
-                  target="_blank">KAUST 2025 Workshop</a>
-              </span>
-            </li>
-
-
-
-            <li>
-              <span class="news-date"> (July 29, 2025) </span>
-              <span class="news-text">
-                (Conference Talk) Presenting in and organizing a technical session on Bayesion Inference -
-                International
-                Conference on Monte Carlo Methods and Applications (MCM) - llinois Institute of Technology, Chicago,
-                US
-                <a href="https://fjhickernell.github.io/mcm2025/"
-                  target="_blank">https://fjhickernell.github.io/mcm2025/</a>
-              </span>
-            </li>
-
-            <li>
-              <span class="news-date"> (May 08, 2025) </span>
-              <span class="news-text">
-                (Symposium) ISDA-Online: Open Session on Non-linear Data Assimilation
-                <a href="https://isda-online.univie.ac.at/online-events/may-2025-non-linear-data-assimilation/"
-                  target="_blank">https://isda-online.univie.ac.at/online-events/may-2025-non-linear-data-assimilation/</a>
-              </span>
-            </li>
-
-            <li>
-              <span class="news-date"> (May 7-9, 2025) </span>
-              <span class="news-text">
-                (Conference Talk) The 9th International Arab Conference on Mathematics and Computations, Zarqa
-                University, Jordan
-                <a href="https://conf.zu.edu.jo/iacmc/" target="_blank">https://conf.zu.edu.jo/iacmc/</a>
-              </span>
-            </li>
-
-            <li>
-              <span class="news-date"> (Feb 20-22, 2025) </span>
-              <span class="news-text">
-                (Conference Talk) The Fourth International Conference on Mathematics and Statistics (ICMS25), American
-                University of Sharjah, UAE
-                <a href="https://www.aus.edu/conferences/the-fourth-international-conference-on-mathematics-and-statistics"
-                  target="_blank">https://www.aus.edu/conferences/the-fourth-international-conference-on-mathematics-and-statistics</a>
-              </span>
-            </li>
-
-            <li>
-              <span class="news-date"> (Feb 11, 2025) </span>
-              <span class="news-text">
-                (Hybrid Seminar Talk) UQ Seminar, RWTH Aachen University, Germany
-                <a href="https://www.uq.rwth-aachen.de/cms/UQ/Forschung/~gbopj/MATH4UQ-Forschungseminar/lidx/1/s"
-                  target="_blank">https://www.uq.rwth-aachen.de/cms/UQ/Forschung/~gbopj/MATH4UQ-Forschungseminar/lidx/1/</a>
-              </span>
-            </li>
-
-            <li>
-              <span class="news-date"> (March 3-7, 2025) </span>
-              <span class="news-text">
-                (Presenting in and organizing a minisymposium on Data Assimilation) SIAM Conference on Computational
-                Science and Engineering (CSE25), Fort Worth, Texas, U.S.
-                <a href="https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=82251"
-                  target="_blank">https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=82251</a>
-              </span>
-            </li>
-
-
-            <li>
-              <span class="news-date">Sep 11, 2024: </span>
-              <span class="news-text">
-                New preprint is out "Local Sequential MCMC for Data Assimilation with Applications in Geoscience"
-                which can be found on arXiv at this link:
-                <a href="https://arxiv.org/pdf/2409.07111" arget="_blank">https://arxiv.org/pdf/2409.07111</a>
-              </span>
-            </li>
-
-            <li>
-              <span class="news-date"> (Feb 28, 2025) </span>
-              <span class="news-text">
-                (Seminar Talk) Math Department, Texas A & M, Texas, USA
-                <a href="https://www.math.tamu.edu/seminars/" target="_blank">https://www.math.tamu.edu/seminars/</a>
-              </span>
-            </li>
-
-            <li>
-              <span class="news-date"> (Feb 26, 2025) </span>
-              <span class="news-text">
-                (Colloquium Talk) Scientific Department, FSU, Florida, USA
-                <a href="https://www.sc.fsu.edu/news-and-events/seminars"
-                  target="_blank">https://www.sc.fsu.edu/news-and-events/seminars</a>
-              </span>
-            </li>
-
-            <li>
-              <span class="news-date"> (Dec 16 - 20, 2024) </span>
-              <span class="news-text">
-                (Conference) 14th AIMS Conference on Dynamical Systems, Differential Equations and Applications, NYU
-                Abu
-                Dhabi, UAE
-                <a href="https://www.aimsconference.org/conferences/2024/index.html"
-                  target="_blank">https://www.aimsconference.org/conferences/2024/index.html</a>
-              </span>
-            </li>
-
-            <li>
-              <span class="news-date"> (Dec 10 - 12, 2024) </span>
-              <span class="news-text">
-                (Conference) MathConnect 2024, KFUPM, SA
-                <a href="https://events.kfupm.edu.sa/event/217/"
-                  target="_blank">https://events.kfupm.edu.sa/event/217/</a>
-              </span>
-            </li>
-
-
-
-            <li>
-              <span class="news-date"> (Sep 6, 2024) </span>
-              <span class="news-text">
-                (Symposium) ISDA-Online: Open Session on Data Assimilation
-                <a href="https://isda-online.univie.ac.at/online-events/september-2024-open-session-on-data-assimilation/"
-                  target="_blank">https://isda-online.univie.ac.at/online-events/september-2024-open-session-on-data-assimilation/</a>
-              </span>
-            </li>
-
-
-
-            <li>
-              <span class="news-date"> (Mar 25, 2024) </span>
-              <span style="color:WHITE">
-                (Seminar talk) Department of Statistics and Data Science, Washington University in St. Louis, MO, USA
-                <a href="" target="_blank"></a>
-              </span>
-            </li>
-
-
-            <li>
-              <span class="news-date"> (Jan 23, 2024) </span>
-              <span style="color:WHITE">
-                (Invited talk) IESE Department, the University of Illinois Urbana-Champaign, Illinois, USA
-                <a href="" target="_blank"></a>
-              </span>
-            </li>
-
-
-            <!-- <li>
-                    <span style="color: #c9edb9">Nov 18, 2023: </span>
-                    <span style="color:WHITE">
-                      New preprint is out "Unbiased and Multilevel Methods for a Class of Diffusions Partially Observed via Marked Point Processes"
-                      which can be found on arXiv at this link:
-                      <a href="https://arxiv.org/pdf/2311.09875.pdf" arget="_blank">https://arxiv.org/pdf/2311.09875.pdf</a>
-                    </span>
-                   </li>
-
-                   <li>
-                      <span style="color: #c9edb9"> (Oct 16, 2023) </span>
-                      <span style="color:WHITE">
-                        Presenting in the International Symposium on Data Assimilation (ISDA), Bologna, Italy
-                                <a href="https://eventi.unibo.it/isda2023"
-                                        target="_blank" >https://eventi.unibo.it/isda2023</a>
-                       </span>
-                    </li>
-
-                   <li>
-                      <span style="color: #c9edb9"> (Sep 27, 2023) </span>
-                      <span style="color:WHITE">
-                        Giving a talk in the Stochastic Seminar at New York University Abu Dhabi
-                                <a href="https://wp.nyu.edu/adps/"
-     								                   target="_blank" >https://wp.nyu.edu/adps/</a>
-                       </span>
-                    </li>
-
-                  <li>
-                    <span style="color: #c9edb9">Sep 26, 2023: </span>
-                    <span style="color:WHITE">
-                      New preprint is out "On Time Uniform Wong-Zakai Approximation Theorems"
-                      which can be found on arXiv at this link:
-                      <a href="https://arxiv.org/pdf/2310.04967.pdf" arget="_blank">https://arxiv.org/pdf/2310.04967.pdf</a>
-                    </span>
-                   </li>
-
-
-                  <li>
-                    <span style="color: #c9edb9">Sep 26, 2023: </span>
-                    <span style="color:WHITE">
-                      New preprint is out "Bayesian Parameter Inference for Partially Observed Diffusions using Multilevel Stochastic Runge-Kutta Methods"
-                      which can be found on arXiv at this link:
-                      <a href="https://arxiv.org/pdf/2309.13557.pdf" arget="_blank">https://arxiv.org/pdf/2309.13557.pdf</a>
-                    </span>
-                   </li>
-
-
-                   <p>
-                     <span style="color: #c9edb9">Sep 18, 2023: </span>
-                     <span style="color:WHITE">
-                       New preprint is out "Bayesian Parameter Inference for Partially Observed Stochastic Volterra Equations" which can be found on arXiv at this link:
-                       <a href="https://arxiv.org/pdf/2310.03114.pdf" arget="_blank">https://arxiv.org/pdf/2310.03114.pdf</a>
-                     </span>
-                    </p>
-
-
-                  <li>
-                    <span style="color: #c9edb9">Sep 18, 2023: </span>
-                    <span style="color:WHITE">
-                      New preprint is out "Unbiased Parameter Estimation for Partially Observed Diffusions" which can be found on arXiv at this link:
-                      <a href="https://arxiv.org/pdf/2309.10589.pdf" arget="_blank">https://arxiv.org/pdf/2309.10589.pdf</a>
-                    </span>
-                   </li> -->
-
-
-
-            <!-- <p>
-                    <span style="color: #c9edb9">(June 30, 2023)  </span>
-                    <span style="color:WHITE">
-                      Giving a talk at the 24th STUOD Sandbox Workshop on Data Assimilation Theory and Application, Imperial College London, UK
-			    <a href="https://www.imperial.ac.uk/events/160872/24th-stuod-sandbox-workshop-2/" arget="_blank">
-            https://www.imperial.ac.uk/events/160872/24th-stuod-sandbox-workshop-2/</a>
-                    </span>
-                   </p> -->
-
-
-
-            <!-- <p>
-                    <span style="color: #c9edb9">May 1st, 2023: </span>
-                    <span style="color:WHITE">
-                      New preprint is out "Sequential Markov Chain Monte Carlo for Lagrangian Data
-    Assimilation with Applications to Unknown Data Locations" which can be found on arXiv at this link:
-                      <a href="https://arxiv.org/pdf/2305.00484.pdf" arget="_blank">https://arxiv.org/pdf/2305.00484.pdf</a>
-                    </span>
-                   </p> -->
-
-            <!--
-                   <p>
-                    <span style="color: #c9edb9">29 June, 2022: </span>
-                    <span style="color:WHITE">
-                      Giving a talk at  <a href="https://www.imsannualmeeting-london2022.com/" arget="_blank">2022 IMS Annual Meeting</a>
-                      on a lagged particle filter for stable high-dimensional
-											 filtering of a class of state-space models.
-                    </span>
-                   </p>
-                 -->
-            <!-- <p>
-                    <span style="color: #c9edb9">April 2022: </span>
-                    <span style="color:WHITE">
-                      Giving an invited talk at <a href="https://www.utk.edu/" arget="_blank"> the Math Department of UTK</a> on a lagged particle filter for stable high-dimensional
-											 filtering of a class of state-space models.
-                    </span>
-                   </p> -->
-
-            <!-- <p>
-                    <span style="color: #c9edb9">June 2022: </span>
-                    <span style="color:WHITE">
-                      Giving a talk at
-                      <a href="https://enkf.norceprosjekt.no/enkf-workshop/enkf-workshop-2022-kviknes-hotel-balestrand-norway" arget="_blank">
-                        2022 EnKF Workshop, Norway</a>
-                        on log-normalizing constant using EnKBF
-                      with applications to high-dimensional models.
-                    </span>
-                   </p> -->
-
-            <!-- <p>
-                    <span style="color: #c9edb9">July 2022: </span>
-                    <span style="color:WHITE">
-                      Giving a talk at <a href="https://www.ricam.oeaw.ac.at/events/conferences/mcqmc2022/" arget="_blank">
-                        15th International Conference on MCQMC, Austria</a> on a lagged particle filter for stable high-dimensional
-											  filtering of a class of state-space models.
-                    </span>
-                   </p> -->
-
-          </ul>
-        </div>
-        </p>
+      <div class="pub-group">
+        <h3>Preprints</h3>
+        <ul class="pubs" data-group="preprint">
+          <li><span class="yr">2026</span>
+            <div><span class="title">Whittle&ndash;Matérn Fields with Variable Smoothness</span>
+              <span class="authors"><b>Ruzayqat, H.</b>, Lei, W., Bolin, D., Turkiyyah, G. &amp; Knio, O.</span>
+            </div><a class="pdf" href="https://arxiv.org/pdf/2602.16581" target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li><span class="yr">2025</span>
+            <div><span class="title">Bayesian Anomaly Detection in Variable-Order and Variable-Diffusivity Fractional
+                Mediums</span>
+              <span class="authors"><b>Ruzayqat, H.</b>, Turkiyyah, G. &amp; Knio, O.</span>
+            </div>
+          </li>
+          <li><span class="yr">2024</span>
+            <div><span class="title">Local Sequential MCMC for Data Assimilation with Applications in Geoscience</span>
+              <span class="authors"><b>Ruzayqat, H.</b> &amp; Knio, O.</span>
+            </div><a class="pdf" href="https://arxiv.org/pdf/2409.07111" target="_blank" rel="noopener">PDF</a>
+          </li>
+        </ul>
       </div>
 
-    </section>
-
-    <!-- One -->
-    <section id="one" class="wrapper style2 spotlights">
-      <section>
-        <a href="#" class="image"><img src="images/Hamza_prof.jpeg" alt="Hamza Ruzayqat"
-            data-position="center center" /></a>
-        <div class="content">
-          <div class="inner">
-            <h2>Hi There!</h2>
-            <p>I am a Reasearch Scientist at
-              <a href="https://www.kaust.edu.sa/en" target="_blank">King Abdullah University of Science and Technology
-                (KAUST)</a>.
-              I was a Post-Doctoral Researcher at KAUST from Nov 2019 - Sep 2022. In May 2019,
-              I obtained my PhD and Concurrent Masters degrees in Mathematics
-              from <a href="https://www.utk.edu/" target="_blank">the University of Tennessee, Knoxville</a>, TN, USA.
-              In 2012, I earned my Bachelor degree in Physics and Mathematics
-              from <a href="https://www.birzeit.edu/en" target="_blank">Birzeit University</a>, Birzeit, Palestine.
-            </p>
-
-            <!--
-										<ul class="actions">
-											<li><a href="generic.html" class="button">Learn more</a></li>
-										</ul>
-									-->
-          </div>
-        </div>
-      </section>
-      <!-- <section>
-								<a href="#" class="image"><img src="images/Hamza_shore.JPG" alt="" data-position="top center" /></a>
-								<div class="content">
-									<div class="inner">
-										<p>I am also a husband and a father!</p>
-										<ul class="actions">
-											<li><a href="#two" class="button scrolly">Learn more</a></li>
-											</ul>
-
-									</div>
-								</div>
-							</section>  -->
-
-      <!--
-							<section>
-								<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
-								<div class="content">
-									<div class="inner">
-										<h2>Ultricies aliquam</h2>
-										<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-										<ul class="actions">
-											<li><a href="generic.html" class="button">Learn more</a></li>
-										</ul>
-									</div>
-								</div>
-							</section>
-						-->
-
-    </section>
-
-    <!-- Two -->
-    <section id="two" class="wrapper style3-alt spotlights">
-      <section>
-        <div class="content">
-          <div class="inner">
-            <h2>Research</h2>
-            <h4>My research focuses on the design, development, and use of efficient and theoretically
-              rigorous stochastic algorithms for data analysis and modeling of real-world problems in
-              science, engineering, and economics. Such problems include, for example, anomaly detection in
-              fractional diffusions, numerical weather forecasting, stock market index prediction etc.
-
-              Among the areas in which I work are:
-              <ul>
-                <li>Monte Carlo Algorithms</li>
-                <li>Uncertainty Quantification & Inverse Problems</li>
-                <li>Data Assimilation</li>
-                <li>Multilevel and Unbiased Methods</li>
-                <li>Bayesian Inference</li>
-                <li>MCMC</li>
-              </ul>
-            </h4>
-
-
-            <ul class="actions">
-              <li><a href="#three" class="button">Learn more</a></li>
-            </ul>
-
-          </div>
-        </div>
-      </section>
-
-      <section class="bg-color-1">
-        <div class="row">
-          <div class="column images">
-            <!-- Add multiple images for this topic -->
-            <img src="images/MC.jpg" alt="Monte Carlo methods" class="responsive-image" loading="lazy" />
-          </div>
-          <div class="column content">
-            <h2>Monte Carlo methods (A General Area)</h2>
-            <p>
-              This includes Markov chain Monte Carlo methods, sequential Monte Carlo methods, and multielevel Monte
-              Carlo, debiasing schemes and many other areas.
-            </p>
-            <ul class="actions">
-              <li><a href="#three" class="button">Learn more</a></li>
-            </ul>
-
-            <!-- Inline comment below images -->
-            <p class="research-note">
-              Monte Carlo methods encompass a broad class of computational algorithms that rely on repeated random
-              sampling
-              to estimate numerical results, and they are extensively used in areas like numerical integration,
-              optimization, stochastic simulations, and Bayesian inference.
-            </p>
-
-          </div>
-        </div>
-      </section>
-
-
-      <section class="bg-color-2">
-        <div class="row">
-          <div class="column images">
-            <!-- Add multiple images for Data Assimilation -->
-            <img src="images/ensembles_vs_smcmc.png" alt="Sequential MCMC vs ensembles" class="responsive-image"
-              loading="lazy" />
-            <img src="images/SWE_U.jpg" alt="Shallow water equations" class="responsive-image" loading="lazy" />
-            <img src="images/localization_v1_v2_illustration.png" alt="Localization Strategies for SMCMC illustration"
-              class="responsive-image" loading="lazy" />
-          </div>
-          <div class="column content">
-            <h2>Data assimilation</h2>
-            <p>
-              This includes particle filtering (and lagged PF), ensemble Kalman/Kalman-Bucy filtering, sequential MCMC
-              and localization schemes.
-            </p>
-            <ul class="actions">
-              <li><a href="#three" class="button">Learn more</a></li>
-            </ul>
-
-            <!-- Inline comment below images -->
-            <p class="research-note">
-              <strong>Note:</strong> The first image is from our QRJMS's paper on Sequential MCMC, highlighting the
-              algorithm’s efficiency as state dimensions increase. It shows how the algorithm maintains high accuracy
-              at
-              a much lower computational cost than traditional ensemble methods.
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              The second image is obtained from our SIAM/JUQ's study on lagged particle filtering. The left column
-              shows
-              the x-axis horizontal velocity U of a fluid in a bounded domain simulated using shallow-water equations
-              at
-              different times taking as the reference. Noisy data is generated from this reference state (in fact the
-              water height is observed at all grid points, while u and v are observed at one-third of the grid
-              points).
-              The second column illustrates the superior matching of the lagged particle filter results (with only 100
-              particles) to the reference state, compared to ensemble Kalman methods (with 1000 ensemble members).
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              The third image is from our new preprint on localization strategies for Sequential MCMC methods. It
-              illustrates two localization variants designed to handle high-dimensional, nonlinear, and non-Gaussian
-              state-space models by exploiting the spatial sparsity of observations to reduce the effective degrees of
-              freedom and improve efficiency.
-            </p>
-
-
-          </div>
-        </div>
-      </section>
-
-      <section class="bg-color-1">
-        <div class="row">
-          <div class="column images">
-            <!-- Add multiple images for Data Assimilation -->
-            <img src="images/anomaly_detect.jpg" alt="Anomaly detection" class="responsive-image" loading="lazy" />
-            <img src="images/inv_prob.png" alt="Inverse problems" class="responsive-image" loading="lazy" />
-            <img src="images/EnKBF.jpg" alt="EnKBF results" class="responsive-image" loading="lazy" />
-          </div>
-          <div class="column content">
-            <h2>Uncertainty Quantification & Inverse Problems</h2>
-            <p>
-              This includes sensetivity analysis, online and offline parameter calibration (estimation), and inverse
-              problems (e.g. anomalies detection in a fractional medium).
-            </p>
-            <ul class="actions">
-              <li><a href="#three" class="button">Learn more</a></li>
-            </ul>
-
-            <!-- Inline comment below images -->
-            <p class="research-note">
-              <strong>Note:</strong> The first image is from our preprint on Bayesian anomaly detection in fractional
-              mediums with
-              variable order and variable diffusivity. The image shows that our algorithm is succeful in learning the
-              elliptical anomaly
-              geometrical features (center coodinates, major and minor axes and angle of rotation) and physical
-              features
-              (fractional order
-              and diffsuivity).
-
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              The second image is obtained from our J. Comp. Phys.'s paper on unbiased estimation using
-              Schrödinger-Föllmer sampler.
-              The image shows the unbiased estimate of the mean of a posterior distribution of a log-permeability
-              field
-              in an elliptic
-              PDE in terms of the pressure field. The PDE describes the presuure in a porous media flow. We sample
-              from
-              the Gaussian posterior
-              using SF sampler unbiasedly.
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              The third image is obtained from our Adv. Appl. Probab.'s paper on estimating the log-normalizing
-              constant
-              of the
-              the filtering distribution using ensemble-Kalman-Bucy filter (EnKBF). This estimate of the
-              log-normalizing
-              constant
-              can then be used in an online algorithm to estimate unknown parameters in a state-space model. The image
-              shows the
-              estimation of a parameter in Lorenz 96 model (with 36 variables) using our offline parameter estimation
-              algorithm.
-            </p>
-
-          </div>
-        </div>
-      </section>
-
-      <section class="bg-color-2">
-        <div class="row">
-          <div class="column images">
-            <!-- Add multiple images for Data Assimilation -->
-            <img src="images/param_est.png" alt="Parameter estimation" class="responsive-image" loading="lazy" />
-            <img src="images/uld_vs_mala.jpg" alt="ULD vs MALA" class="responsive-image" loading="lazy" />
-          </div>
-          <div class="column content">
-            <h2>Multilevel and Unbiased Estimation</h2>
-            <p>
-              This includes reducing the variance and the cost of a quantity of interest, multilevel and unbiased
-              parameter inference.
-            </p>
-            <ul class="actions">
-              <li><a href="#three" class="button">Learn more</a></li>
-            </ul>
-
-            <!-- Inline comment below images -->
-            <p class="research-note">
-              <strong>Note:</strong> The first image is from our Stat. Comput.'s paper on multilevel estimation fro
-              the
-              EnKBF-log-normalizing constant.
-              The image show the estimation of a parameter in the Lorenz 63 model using the ML estimator.
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              The second image is obtained from our SIAM Scient. Comput.' paper on unbiased estimation using
-              underdamped
-              Langevin dynamics.
-              The image shows the cost of our unbiased estimator (ULD) in seconds versus the unbiased Metropolis
-              adjusted Langevin algorithm (UB-MALA)
-              when sampling from a distribution $\pi(x) \propto e^{-U(x)}$, where $U(x)$ is a double-well potential
-              and
-              $x \in \mathbb{R}^{100}$.
-              Our method provides an unbiased estimte of $\mathbb{E}_{\pi}[x]$ at a much lower cost than UB-MALA.
-            </p>
-
-          </div>
-        </div>
-      </section>
-
-
-      <!-- Three -->
-      <section id="three" class="wrapper style1 fullscreen fade-up">
-        <div class="inner" id="grad">
-          <h1>Preprints</h1>
-
-          <ul class="publication-list">
-            <li>19. (2026) <span style="color: #ffffff">Ruzayqat, H.</span>, Chipilski, H. G. and Knio, O.
-              <span style="color: #ffe599; font-weight:bold">Two Localization Strategies for Sequential MCMC Data
-                Assimilation with Applications to Nonlinear Non-Gaussian Geophysical Models.</span>
-              <a href="https://arxiv.org/pdf/2603.05817" target="_blank" class="button">PDF</a>
-            </li>
-
-            <li>18. (2026) <span style="color: #ffffff">Ruzayqat, H.</span>, Lei, W., Bolin, D., Turkiyyah, G. and Knio, O.
-              <span style="color: #ffe599; font-weight:bold">Whittle-Matérn Fields with Variable Smoothness.</span>
-              <a href="https://arxiv.org/pdf/2602.16581" target="_blank" class="button">PDF</a>
-            </li>
-
-            <li>17. (2025) <span style="color: #ffffff">Ruzayqat, H.</span>, Turkiyyah, G. and Knio, O.
-              <span style="color: #ffe599; font-weight:bold">Bayesian Anomaly Detection in Variable-Order and
-                Variable-Diffusivity Fractional Mediums.</span>
-            </li>
-
-            <li>16. (2024) <span style="color: #ffffff">Ruzayqat, H.</span> and Knio, O.
-              <span style="color: #ffe599; font-weight:bold">Local Sequential MCMC for Data Assimilation with
-                Applications in Geoscience.</span>
-              <a href="https://arxiv.org/pdf/2409.07111" target="_blank" class="button">PDF</a>
-            </li>
-
-
-
-
-            <h1>Publications</h1>
-
-            <li>15. (2023) Del Moral, P., Hu, S., Jasra, A., <span style="color: #ffffff">Ruzayqat, H.</span>, & Wang,
-              X.
-              <span style="color: #ffe599; font-weight:bold">On Time Uniform Wong-Zakai Approximation Theorems.</span>
-              <span style="color: #c9edb9; font-weight:bold"> (to appear in Mathematics of Computation) </span>
-              <a href="https://arxiv.org/pdf/2310.04967.pdf" target="_blank" class="button">PDF</a>
-            </li>
-
-            <li>14. (2024) Del Moral, P., Hu, S., Jasra, A., <span style="color: #ffffff">Ruzayqat, H.</span>, & Wang,
-              X.
-              <span style="color: #ffe599; font-weight:bold">Bayesian Parameter Inference for Partially Observed
-                Diffusions using
-                Multilevel Stochastic Runge-Kutta Methods.</span>
-              <span style="color: #c9edb9; font-weight:bold"> International Journal for Uncertainty Quantification,
-                15(2), 1-18.
-              </span>
-              <a href="https://arxiv.org/pdf/2309.13557.pdf" target="_blank" class="button">PDF</a>
-            </li>
-
-            <li>13. (2024) Alvarez, M., Jasra, A., & <span style="color: #ffffff">Ruzayqat, H.</span>
-              <span style="color: #ffe599; font-weight:bold">Unbiased and Multilevel Methods for a Class of Diffusions
-                Partially
-                Observed via Marked Point Processes.</span>
-              <span style="color: #c9edb9; font-weight:bold"> Statistics and Computing 34(198)</span>
-              <a href="https://arxiv.org/pdf/2311.09875.pdf" target="_blank" class="button">PDF</a>
-            </li>
-
-            <li>12. (2024) Awadelkarim, E., Jasra, A., & <span style="color: #ffffff">Ruzayqat, H.</span>
-              <span style="color: #ffe599; font-weight:bold">Unbiased Parameter Estimation for Partially Observed
-                Diffusions.</span>
-              <span style="color: #c9edb9; font-weight:bold"> SIAM Journal on Control and Optimization, 62(5),
-                2664-2694.
-              </span>
-              <a href="https://arxiv.org/pdf/2309.10589.pdf" target="_blank" class="button">PDF</a>
-            </li>
-
-            <li>11. (2024) <span style="color: #ffffff">Ruzayqat, H.</span>, Beskos, A., Crisan, D., Jasra, A.
-              & Kantas, N., <span style="color: #ffe599; font-weight:bold">Sequential Markov Chain Monte Carlo for
-                Lagrangian Data
-                Assimilation with Applications to Unknown Data Locations.</span>
-              <span style="color: #c9edb9; font-weight:bold"> Quarterly Journal of the Royal Meteorological Society,
-                150(761), 2418-2439.
-              </span>
-              <a href="https://arxiv.org/pdf/2305.00484.pdf" target="_blank" class="button">PDF</a>
-            </li>
-
-            <li>10. (2023) Jasra, A., <span style="color: #ffffff">Ruzayqat, H.</span> and Wu, A.
-              <span style="color: #ffe599; font-weight:bold">Bayesian Parameter Inference for Partially
-                Observed Stochastic Volterra Equations.</span>
-              <span style="color: #c9edb9; font-weight:bold"> Stat. Comput. 34(2), 1-12.
-              </span>
-              <a href="https://arxiv.org/pdf/2310.03114.pdf" target="_blank" class="button">PDF</a>
-            </li>
-
-            <li>9. (2023) <span style="color: #ffffff">Ruzayqat, H.</span>, Chada, N. K. & Jasra, A.
-              <span style="color: #ffe599; font-weight:bold">Unbiased estimation using underdamped Langevin
-                dynamics.</span>
-              <span style="color: #c9edb9; font-weight:bold"> SIAM J. Sci. Comput., 45(6), A3047-A3070. </span>
-              <a href="https://arxiv.org/pdf/2206.07202" target="_blank" class="button">PDF</a>
-            </li>
-
-            <li>8. (2023) <span style="color: #ffffff">Ruzayqat, H.</span>, Beskos, A., Crisan, D., Jasra, A.
-              & Kantas, N., <span style="color: #ffe599; font-weight:bold">Unbiased estimation using a class of
-                diffusion processes.</span>
-              <span style="color: #c9edb9; font-weight:bold">J. Comput. Phys., Volume 472, 1, 111643</span>
-              <a href="https://arxiv.org/pdf/2203.03013.pdf" target="_blank" class="button">PDF</a>
-            </li>
-
-            <li>7. (2022) Crisan, D., Del Moral, P., Jasra, A. & <span style="color: #ffffff">Ruzayqat, H.</span>
-              <span style="color: #ffe599; font-weight:bold">Log-Normalization Constant Estimation using the Ensemble
-                Kalman-Bucy Filter with Application to High-Dimensional Models.</span>
-              <span style="color: #c9edb9; font-weight:bold">Adv. Appl. Probab., 54(4), 1139--1163.
-              </span> <a href="https://arxiv.org/pdf/2101.11460.pdf" target="_blank" class="button">PDF</a>
-            </li>
-
-            <li>6. (2021) <span style="color: #ffffff">Ruzayqat, H.</span> & Jasra, A. <span
-                style="color: #ffe599; font-weight:bold">Unbiased
-                Parameter Inference for a Class of Partially Observed L&egravevy-Process Models.</span>
-              <span style="color: #c9edb9; font-weight:bold"> Foundations of Data Science,
-                <span style="font-weight:bold">4</span> (2), pp. 299--322.
-              </span> <a href="https://arxiv.org/pdf/2112.13874.pdf" target="_blank" class="button">PDF</a>
-            </li>
-
-            <li>5. (2021) <span style="color: #ffffff">Ruzayqat, H.</span>, Er-Raiy, A., Beskos, A., Crisan, D.,
-              Jasra,
-              A.
-              & Kantas, N., <span style="color: #ffe599; font-weight:bold">A Lagged Method for Stable High-Dimensional
-                Filtering of a Class of State-Space Models.</span>
-              <span style="color: #c9edb9; font-weight:bold">
-                SIAM-ASA J. Uncertain. Quantif. 10(3), pp.1130--1161. </span>
-              <a href="https://arxiv.org/pdf/2110.00884.pdf" target="_blank" class="button">PDF</a>
-            </li>
-
-            <li>4. (2021) <span style="color: #ffffff">Ruzayqat, H.</span>, Chada, N. K. & Jasra, A.,
-              <span style="color: #ffe599; font-weight:bold">Multilevel Estimation of Normalization Constants Using
-                the Ensemble Kalman–Bucy Filter</span>
-              <span style="color: #c9edb9; font-weight:bold"> Stat. Comput. 32 (38).
-              </span> <a href="https://arxiv.org/pdf/2108.03935.pdf" target="_blank" class="button">PDF</a>
-            </li>
-
-
-
-            <li>3. (2021) Beskos, A., Crisan, D., Jasra, A. , Kantas, N. & <span style="color: #ffffff">Ruzayqat,
-                H.</span>,
-              <span style="color: #ffe599; font-weight:bold">Score-Based Parameter Estimation for a
-                Class of Continuous-Time State Space Models.</span>
-              <span style="color: #c9edb9; font-weight:bold">
-                SIAM J. Sci. Comput., <span style="font-weight:bold">43</span>(4), A2555--A2580 </span>
-              <a href="https://arxiv.org/pdf/2008.07803.pdf" target="_blank" class="button">PDF</a>
-            </li>
-
-            <li>2. (2020) <span style="color: #ffffff">Ruzayqat, H.</span> & Jasra, A.,
-              <span style="color: #ffe599; font-weight:bold">Unbiased Estimation of the Solution to Zakai's
-                Equation.</span>
-              <span style="color: #c9edb9; font-weight:bold">
-                Monte Carlo Methods and Applications, <span style="font-weight:bold">26</span>(2), 113--129
-              </span>
-              <a href="https://arxiv.org/pdf/2002.01270.pdf" target="_blank" class="button">PDF</a>
-            </li>
-
-            <li>1. (2018) <span style="color: #ffffff">Ruzayqat, H. M.</span> & Schulze, T. P.,
-              <span style="color: #ffe599; font-weight:bold">A Rejection Scheme for Off-Lattice Kinetic Monte Carlo
-                Simulation.</span>
-              <span style="color: #c9edb9; font-weight:bold">
-                J. Chem. Theory Comput. <span style="font-weight:bold">14</span>(1), 48--54
-              </span>
-              <a href="https://web.math.utk.edu/~schulze/paper33.pdf" target="_blank" class="button">PDF</a>
-            </li>
-
-
-            <h2>Dissertation and Technical Reports</h2>
-
-            <li>3. (2022) Ashby, P., Bhatt, G., Baroi, M., Kao, C.-Y., Kramer, P. R., Kivela, M.,
-              Lakoba, T., Matz, S. <span style="color: #ffffff">& Ruzayqat, H.</span>.
-              <span style="color: #ffe599; font-weight:bold">Development of image procesisng algorithm for an atomic
-                force
-                microscopy scanner (AFM scanner). <span style="color: #c9edb9; font-weight:bold">
-                  Mathematics in Industry Reports, Cambridge University Press. </span> </span>
-              <a href="https://www.cambridge.org/engage/miir/article-details/624ae11a5ab8df06a08a1343" target="_blank"
-                class="button">PDF</a>
-            </li>
-
-            <li>2. (2019) <span style="color: #ffffff">Ruzayqat, H. M.</span>,
-              <span style="color: #ffe599; font-weight:bold">Rejection Enhanced Off-Lattice Kinetic Monte
-                Carlo.</span>
-              <span style="color: #c9edb9; font-weight:bold">
-                (Doctoral dissertation). Available from Tennessee Research and Creative Exchange
-              </span>
-              <a href="https://trace.utk.edu/islandora/object/utk.ir.td%3A12191" target="_blank" class="button">PDF</a>
-            </li>
-
-
-            <li>1. (2017) Allaire H., Odu A. G., Gu B., Lu W., Newell A., Paranamana J., Phan T. <span
-                style="color: #ffffff">& Ruzayqat H.</span>,
-              <span style="color: #ffe599; font-weight:bold">Temperature Effects in Reacting Porous Media
-                Applications.</span>
-              <span style="color: #c9edb9; font-weight:bold">
-                GSMMC 2017 Summer Camp.
-              </span>
-            </li>
-
-
-
-
-            <div class="grid-wrapper">
-              <div class="grid-item">
-                <a href="https://www.scimagojr.com/journalsearch.php?q=14082&amp;tip=sid&amp;exact=no">
-                  <img src="https://www.scimagojr.com/journal_img.php?id=14082"
-                    alt="Quarterly Journal of the Royal Meteorological Society">
-                </a>
-              </div>
-
-              <div class="grid-item">
-                <a href="https://www.scimagojr.com/journalsearch.php?q=26425&amp;tip=sid&amp;exact=no">
-                  <img src="https://www.scimagojr.com/journal_img.php?id=26425"
-                    alt="SIAM Journal on Scientific Computing">
-                </a>
-              </div>
-
-              <div class="grid-item">
-                <a href="https://www.scimagojr.com/journalsearch.php?q=13191&amp;tip=sid&amp;exact=no">
-                  <img src="https://www.scimagojr.com/journal_img.php?id=13191" alt="Journal of Computational Physics">
-                </a>
-              </div>
-
-              <div class="grid-item">
-                <a href="https://www.scimagojr.com/journalsearch.php?q=26405&amp;tip=sid&amp;exact=no">
-                  <img src="https://www.scimagojr.com/journal_img.php?id=26405"
-                    alt="SIAM Journal on Control and Optimization">
-                </a>
-              </div>
-
-              <div class="grid-item">
-                <a href="https://www.scimagojr.com/journalsearch.php?q=5100155074&amp;tip=sid&amp;exact=no">
-                  <img src="https://www.scimagojr.com/journal_img.php?id=5100155074"
-                    alt="Journal of Chemical Theory and Computation">
-                </a>
-              </div>
-
-              <div class="grid-item">
-                <a href="https://www.scimagojr.com/journalsearch.php?q=21100830444&amp;tip=sid&amp;exact=no">
-                  <img src="https://www.scimagojr.com/journal_img.php?id=21100830444"
-                    alt="SIAM / ASA Journal on Uncertainty Quantification">
-                </a>
-              </div>
-              <div class="grid-item">
-                <a href="https://www.scimagojr.com/journalsearch.php?q=23614&amp;tip=sid&amp;exact=no">
-                  <img src="https://www.scimagojr.com/journal_img.php?id=23614" alt="Statistics and Computing">
-                </a>
-              </div>
-
-              <div class="grid-item">
-                <a href="https://www.scimagojr.com/journalsearch.php?q=25092&amp;tip=sid&amp;exact=no">
-                  <img src="https://www.scimagojr.com/journal_img.php?id=25092" alt="Mathematics of Computation">
-                </a>
-              </div>
-              <!-- <div class="grid-item">
-                        <a href="https://www.scimagojr.com/journalsearch.php?q=21100415545&amp;tip=sid&amp;exact=no">
-                            <img src="https://www.scimagojr.com/journal_img.php?id=21100415545" alt="International Journal for Uncertainty Quantification">
-                        </a>
-                    </div> -->
-
-              <!-- <div class="grid-item">
-                        <a href="https://www.scimagojr.com/journalsearch.php?q=21101113590&amp;tip=sid&amp;exact=no">
-                            <img src="https://www.scimagojr.com/journal_img.php?id=21101113590" alt="Foundations of Data Science">
-                        </a>
-                    </div> -->
+      <div class="pub-group">
+        <h3>Dissertation &amp; technical reports</h3>
+        <ul class="pubs">
+          <li><span class="yr">2022</span>
+            <div><span class="title">Development of Image Processing Algorithm for an Atomic Force Microscopy
+                Scanner</span>
+              <span class="authors">Ashby, P., Bhatt, G., Baroi, M., Kao, C.-Y., Kramer, P. R., Kivela, M., Lakoba,
+                T., Matz, S. &amp; <b>Ruzayqat, H.</b></span>
+              <span class="venue">Mathematics in Industry Reports, Cambridge University Press</span>
+            </div><a class="pdf" href="https://www.cambridge.org/engage/miir/article-details/624ae11a5ab8df06a08a1343"
+              target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li><span class="yr">2019</span>
+            <div><span class="title">Rejection Enhanced Off-Lattice Kinetic Monte Carlo</span>
+              <span class="authors"><b>Ruzayqat, H. M.</b></span>
+              <span class="venue">Doctoral dissertation, University of Tennessee</span>
+            </div><a class="pdf" href="https://trace.utk.edu/islandora/object/utk.ir.td%3A12191" target="_blank"
+              rel="noopener">PDF</a>
+          </li>
+          <li><span class="yr">2017</span>
+            <div><span class="title">Temperature Effects in Reacting Porous Media Applications</span>
+              <span class="authors">Allaire, H., Odu, A. G., Gu, B., Lu, W., Newell, A., Paranamana, J., Phan, T.
+                &amp; <b>Ruzayqat, H.</b></span>
+              <span class="venue">GSMMC 2017 Summer Camp</span>
             </div>
-
-          </ul>
-        </div>
-      </section>
-
-
-      <!-- Four -->
-      <section id="four" class="wrapper style1 fullscreen fade-up">
-        <h1>Collaborators</h1>
-        <div class="collaborators">
-
-          <div class="collaborator-card">
-            <a href="https://cemse.kaust.edu.sa/aanslab/people/person/aimad-er-raiy" target="_blank">Aimad Er-Raiy</a>
-            <p>(Airbus, France)</p>
-          </div>
-
-          <div class="collaborator-card">
-            <a href="https://www.ucl.ac.uk/statistics/people/alexandrosbeskos" target="_blank">Alexandros Beskos</a>
-            <p>(UCL, Statistics, UK)</p>
-          </div>
-
-          <div class="collaborator-card">
-            <a href="https://www.ma.ic.ac.uk/~dcrisan/" target="_blank">Dan Crisan</a>
-            <p>(Imperial, Mathematics, UK)</p>
-          </div>
-
-          <div class="collaborator-card">
-            <a href="https://scholar.google.com/citations?user=hJEdkhYAAAAJ&hl=en" target="_blank">George
-              Turkiyyah</a>
-            <p>(KAUST, CEMSE, SA)</p>
-          </div>
-
-          <div class="collaborator-card">
-            <a href="https://people.bordeaux.inria.fr/pierre.delmoral/research.html" target="_blank">Pierre Del
-              Moral</a>
-            <p>(INRIA, Bordeaux, France)</p>
-          </div>
-
-          <div class="collaborator-card">
-            <a href="https://scholar.google.com/citations?user=GNOopfAAAAAJ&hl=en" target="_blank">David Bolin</a>
-            <p>(KAUST, CEMSE, SA)</p>
-          </div>
-
-          <div class="collaborator-card">
-            <a href="https://scholar.google.com/scholar?q=Hristo+G.+Chipilski" target="_blank">Hristo G. Chipilski</a>
-            <p>(FSU, Scientific Computing, USA)</p>
-          </div>
-
-          <div class="collaborator-card">
-            <a href="http://english.zuel.edu.cn/school/listm.htm" target="_blank">Shulan Hu</a>
-            <p>(ZUEL, Statistics & Mathematics, China)</p>
-          </div>
-
-          <div class="collaborator-card">
-            <a href="https://www.ma.imperial.ac.uk/~nkantas/" target="_blank">Nikolas Kantas</a>
-            <p>(Imperial, Mathematics, UK)</p>
-          </div>
-
-          <div class="collaborator-card">
-            <a href="https://scholar.google.com/citations?user=KuvOKcwAAAAJ&hl=en" target="_blank">Omar Knio</a>
-            <p>(KAUST, CEMSE, SA)</p>
-          </div>
-
-          <div class="collaborator-card">
-            <a href="https://web.math.utk.edu/~schulze/" target="_blank">Tim Schulze</a>
-            <p>(UTK, Mathematics, USA)</p>
-          </div>
-
-          <div class="collaborator-card">
-            <a href="http://english.zuel.edu.cn/school/listm.htm" target="_blank">Xinyu Wang</a>
-            <p>(ZUEL, Business, China)</p>
-          </div>
-
-          <div class="collaborator-card">
-            <a href="https://scholar.google.com/citations?user=KsD9pdkAAAAJ&hl=en" target="_blank">Wenyu Lei</a>
-            <p>(UESTC, Mathematical Sciences, China)</p>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- Five -->
-      <section id="five" class="wrapper style1 fullscreen fade-up">
-        <h1>Codes</h1>
-        <div class="codes">
-
-          <div class="code-card">
-            <a href="https://github.com/ruzayqat/score_based_par_est" target="_blank">
-              Score-Based Parameter Estimation
-            </a>
-          </div>
-
-          <div class="code-card">
-            <a href="https://github.com/ruzayqat/log_nc" target="_blank">
-              Log-Normalizing Constants Estimation Using EnKBF
-            </a>
-          </div>
-
-          <div class="code-card">
-            <a href="https://github.com/ruzayqat/log_mlenkbfnc" target="_blank">
-              Log-Normalizing Constants Estimation Using Multilevel EnKBF
-            </a>
-          </div>
-
-          <div class="code-card">
-            <a href="https://github.com/ruzayqat/laggedPF" target="_blank">
-              Lagged Particle Filter for High-Dimensional Models
-            </a>
-          </div>
-
-          <div class="code-card">
-            <a href="https://github.com/ruzayqat/unbiased_sfs" target="_blank">
-              Unbiased Estimation Using a Class of Diffusion Processes
-            </a>
-          </div>
-
-          <div class="code-card">
-            <a href="https://github.com/ruzayqat/unbiased_uld" target="_blank">
-              Unbiased Estimation Using Underdamped Langevin Dynamics
-            </a>
-          </div>
-
-          <div class="code-card">
-            <a href="https://github.com/ruzayqat/filtering_unknown_data_locations" target="_blank">
-              Sequential MCMC for Data Assimilation
-            </a>
-          </div>
-
-          <div class="code-card">
-            <a href="https://github.com/ruzayqat/LSMCMC?tab=readme-ov-file" target="_blank">
-              Local Sequential MCMC for Data Assimilation
-            </a>
-          </div>
-
-        </div>
-      </section>
-
-
-      <!-- six-->
-      <section id="six" class="wrapper style1 fullscreen fade-up">
-        <div align="center" id="grad4">
-          <h1>Talks</h1>
-          <section>
-            <div class="table-wrapper">
-              <table>
-                <thead>
-                  <tr>
-                    <th> </th>
-                    <th>Date</th>
-                    <th>Institute/Conference</th>
-                    <th>Location</th>
-                  </tr>
-                </thead>
-                <tbody>
-
-                  <tr>
-                    <td> 43. </td>
-                    <td>(May 20, 2026)</td>
-                    <td> (Invited Talk) 2026 Barrett Lectures, University of Tennessee</td>
-                    <td> Knoxville, TN, USA </td>
-                  </tr>
-
-                  <tr>
-                    <td> 42. </td>
-                    <td>(Nov 5, 2025)</td>
-                    <td> (Workshop Talk) KAUST 2025 Workshop on Statistics — Whittle-Matérn fields with variable
-                      smoothness</td>
-                    <td> Thuwal, Saudi Arabia </td>
-                  </tr>
-
-                  <tr>
-                    <td> 41. </td>
-                    <td>(July 29, 2025)</td>
-                    <td> (Conference Talk) Presenting in and organizing a technical session on Bayesian Inference -
-                      International Conference on Monte Carlo Methods and Applications (MCM) - Illinois Institute of
-                      Technology</td>
-                    <td> Chicago, USA </td>
-                  </tr>
-
-
-                  <tr>
-                    <td> 40. </td>
-                    <td>(May 08, 2025)</td>
-                    <td> (Hybrid Symposium) ISDA-Online: Open Session on Non-linear Data Assimilation</td>
-                    <td> USA </td>
-                  </tr>
-
-
-                  <tr>
-                    <td> 39. </td>
-                    <td>(May 7-9, 2025)</td>
-                    <td> (Conference Talk) The 9th International Arab Conference on Mathematics and Computations,
-                      Zarqa
-                      University</td>
-                    <td> Zarqa, Jordan </td>
-                  </tr>
-
-                  <tr>
-                    <td> 38. </td>
-                    <td>(Feb 20-22, 2025)</td>
-                    <td> (Conference Talk) The Fourth International Conference on Mathematics and Statistics (ICMS25),
-                      American University of Sharjah</td>
-                    <td> Sharjah, UAE </td>
-                  </tr>
-
-                  <tr>
-                    <td> 37. </td>
-                    <td>(Feb 11, 2025)</td>
-                    <td> (Hybrid Seminar Talk) UQ Seminar, RWTH Aachen University</td>
-                    <td> Germany </td>
-                  </tr>
-
-                  <tr>
-                    <td> 36. </td>
-                    <td>(March 3 - 7, 2025)</td>
-                    <td> (Organizing a minisymposium on DA in SIAM Conference on Computational Science and Engineering
-                      (CSE25)</td>
-                    <td> Fort Worth, Texas, USA </td>
-                  </tr>
-
-                  <tr>
-                    <td> 35. </td>
-                    <td>(Feb 28, 2025)</td>
-                    <td> (Seminar Talk) Math Department, Texas A & M</td>
-                    <td> Texas, USA</td>
-                  </tr>
-
-                  <tr>
-                    <td> 34. </td>
-                    <td>(Feb 26, 2025)</td>
-                    <td> (Colloquium Talk) Scientific Department, Florida State University</td>
-                    <td> Florida, USA</td>
-                  </tr>
-
-                  <tr>
-                    <td> 33. </td>
-                    <td>(Feb 20-22, 2025)</td>
-                    <td> (Conference Talk) The Fourth International Conference on Mathematics and Statistics, American
-                      University of Sharjah</td>
-                    <td> Sharjah, UAE</td>
-                  </tr>
-
-                  <tr>
-                    <td> 32. </td>
-                    <td>(Feb 16, 2025)</td>
-                    <td> (Seminar Online Talk) UQ Hybrid Seminar, department of mathematics, RWTH Aachen University
-                    </td>
-                    <td> Germany</td>
-                  </tr>
-
-                  <tr>
-                    <td> 31. </td>
-                    <td>(Dec 16 - 20, 2024)</td>
-                    <td> (Conference) 14th AIMS Conference on Dynamical Systems, Differential Equations and
-                      Applications, NYU Abu Dhabi</td>
-                    <td> Abu Dhabi, UAE</td>
-                  </tr>
-
-                  <tr>
-                    <td> 30. </td>
-                    <td>(Dec 12 - 14, 2024)</td>
-                    <td> (Conference) MathConnect 2024: International Conference on Mathematics and its Aplications,
-                      KFUPM</td>
-                    <td> Dahran, SA</td>
-                  </tr>
-
-                  <tr>
-                    <td> 29. </td>
-                    <td>(Sep 6, 2024)</td>
-                    <td> (Symposium) ISDA-Online: Open Session on Data Assimilation</td>
-                    <td> </td>
-                  </tr>
-
-                  <tr>
-                    <td> 28. </td>
-                    <td>(Mar 25, 2024)</td>
-                    <td> (Seminar talk) Department of Statistics and Data Science, Washington University in St. Louis
-                    </td>
-                    <td> Missouri, USA</td>
-                  </tr>
-
-
-                  <tr>
-                    <td> 27. </td>
-                    <td>(Jan 01, 2024)</td>
-                    <td> (Invited talk) IESE Department, the University of Illinois Urbana-Champaign, Illinois, USA
-                    </td>
-                    <td> Illinois, USA</td>
-                  </tr>
-
-
-                  <tr>
-                    <td> 26. </td>
-                    <td>(Oct 16, 2023)</td>
-                    <td>The International Symposium on Data Assimilation (ISDA)</td>
-                    <td>Bologna, Italy</td>
-                  </tr>
-
-                  <tr>
-                    <td> 25. </td>
-                    <td>(Sep 27, 2023)</td>
-                    <td>Seminar talk in the Stochastic Seminar at New York University Abu Dhabi(Invited talk)</td>
-                    <td>Abu Dhabi, UAE</td>
-                  </tr>
-
-                  <tr>
-                    <td> 24. </td>
-                    <td>(Jun. 30, 2023)</td>
-                    <td>24th STUOD Sandbox Workshop on Data Assimilation Theory and Application, Imperial College
-                      London
-                      (Invited talk)</td>
-                    <td>London, UK</td>
-                  </tr>
-
-                  <tr>
-                    <td> 23. </td>
-                    <td>(Jan. 4, 2023)</td>
-                    <td>(Conference talk) Joint Mathematics Meeting 2023</td>
-                    <td>Boston, MA, USA</td>
-                  </tr>
-
-                  <tr>
-                    <td> 22. </td>
-                    <td>(Nov. 28, 2022)</td>
-                    <td>The Applied Mathematics School - AMCS/CEMSE - KAUST (Invited talk)</td>
-                    <td>Thuwal, Saudi Arabia</td>
-                  </tr>
-
-
-                  <tr>
-                    <td> 21. </td>
-                    <td>(Sep. 30, 2022)</td>
-                    <td>Department of Statistics, Imperial College London</td>
-                    <td>London, UK</td>
-                  </tr>
-
-                  <tr>
-                    <td> 20. </td>
-                    <td>(Sep. 26, 2022)</td>
-                    <td>3rd Stochastic Transport in Upper Ocean Dynamics Annual Workshop, Imperial College London</td>
-                    <td>London, UK</td>
-                  </tr>
-
-                  <tr>
-                    <td> 19. </td>
-                    <td>(Jul. 29, 2022)</td>
-                    <td>7th Palestinian Conference on Modern Trends in Mathematics, Birzeit University</td>
-                    <td>Birzeit, Palestine</td>
-                  </tr>
-
-                  <tr>
-                    <td> 18. </td>
-                    <td>(Jul. 2022)</td>
-                    <td>15th International Conference on Monte Carlo and Quasi-Monte Carlo
-                      Methods in Scientific Computing</td>
-                    <td>Linz, Austria</td>
-                  </tr>
-
-                  <tr>
-                    <td> 17. </td>
-                    <td>(Jul. 2022)</td>
-                    <td>The IMS Annual Meeting in Probability and Statistics, University of London</td>
-                    <td>London, UK</td>
-                  </tr>
-
-                  <tr>
-                    <td> 16. </td>
-                    <td>(Jun. 2022)</td>
-                    <td>Ensemble Kalman Filter (EnKF) Workshop</td>
-                    <td>Balestrand, Norway</td>
-                  </tr>
-
-                  <tr>
-                    <td> 15. </td>
-                    <td>(Apr. 2022)</td>
-                    <td>University of Tennessee (Seminar on Data Science, invited talk)</td>
-                    <td>Knoxville, Tennessee, USA</td>
-                  </tr>
-
-                  <tr>
-                    <td> 14. </td>
-                    <td>(Apr. 2022)</td>
-                    <td> SIAM Conference on Uncertainty Quantification</td>
-                    <td>Atlanta, Georgia, USA</td>
-                  </tr>
-
-                  <tr>
-                    <td> 13. </td>
-                    <td>(Dec. 2021)</td>
-                    <td>King Abdullah University of Science and Technology (Graduate Seminar, invited talk, virtual)
-                    </td>
-                    <td>Thuwal, Saudi Arabia</td>
-                  </tr>
-
-                  <tr>
-                    <td> 12. </td>
-                    <td>(Nov. 2021)</td>
-                    <td>King Abdullah University of Science and Technology (Guest Lecturer)</td>
-                    <td>Thuwal, Saudi Arabia</td>
-                  </tr>
-
-                  <tr>
-                    <td> 11. </td>
-                    <td>(Nov. 2021)</td>
-                    <td>New Jersey Institute of Technology (Seminar on Optimization and Machine Learning, invited
-                      talk,
-                      Virtual)</td>
-                    <td>Newark, New Jersey, USA</td>
-                  </tr>
-
-                  <tr>
-                    <td> 10. </td>
-                    <td>(Aug. 2021)</td>
-                    <td>The 13th International Conference on Monte Carlo Methods and Applications, University of
-                      Mannheim (Virtual)</td>
-                    <td>Mannheim, Germany</td>
-                  </tr>
-
-                  <tr>
-                    <td> 9. </td>
-                    <td>(Mar. 2019)</td>
-                    <td>Colorado State University - Department of Mathematics (Invited talk)</td>
-                    <td>Fort Collins, Colorado, USA</td>
-                  </tr>
-
-                  <tr>
-                    <td> 8. </td>
-                    <td>(Oct. 2018)</td>
-                    <td>University of Tennessee - Department of Mathematics (Seminar on Numerical Mathematics)</td>
-                    <td>Knoxville, Tennessee, USA</td>
-                  </tr>
-
-                  <tr>
-                    <td> 7. </td>
-                    <td>(Oct. 2018)</td>
-                    <td>University of Tennessee - Department of Material Sciences and Engineering (Invited talk)</td>
-                    <td>Knoxville, Tennessee, USA</td>
-                  </tr>
-
-                  <tr>
-                    <td> 6. </td>
-                    <td>(Jul. 2018)</td>
-                    <td>SIAM Conference on Mathematical Aspects of Materials Science</td>
-                    <td>Portland, Oregon, USA</td>
-                  </tr>
-
-                  <tr>
-                    <td> 5. </td>
-                    <td>(Jun. 2018)</td>
-                    <td>Claremont Center for the Mathematical Sciences, 2018 Meeting of Mathematical Problems in
-                      Industry </td>
-                    <td>Claremont, California, USA</td>
-                  </tr>
-
-                  <tr>
-                    <td> 4. </td>
-                    <td>(Feb. 2018)</td>
-                    <td>University of Tennessee - Department of Mathematics (Seminar on Numerical Mathematics)</td>
-                    <td>Knoxville, Tennessee, USA</td>
-                  </tr>
-
-                  <tr>
-                    <td> 3. </td>
-                    <td>(Sep. 2017)</td>
-                    <td>University of Tennessee - Department of Mathematics (Seminar on Numerical Mathematics)</td>
-                    <td>Knoxville, Tennessee, USA</td>
-                  </tr>
-
-                  <tr>
-                    <td> 2. </td>
-                    <td>(Jun. 2017)</td>
-                    <td>Rensselaer Polytechnic Institute, GSMMC 2017 Summer Camp</td>
-                    <td>Troy, New York, USA</td>
-                  </tr>
-
-                  <tr>
-                    <td> 1. </td>
-                    <td>(Nov. 2016)</td>
-                    <td>University of Tennessee - Department of Mathematics (Seminar on Numerical Mathematics)</td>
-                    <td>Knoxville, Tennessee, USA</td>
-                  </tr>
-
-                </tbody>
-              </table>
-            </div>
-          </section>
-        </div>
-      </section>
-
-      <!-- six-->
-      <section id="eight" class="wrapper style1 fullscreen fade-up">
-        <div align="center" id="grad5">
-          <span style="color:BLACK; font-weight:bold">
-            <h1> <span style="color:BLACK; font-weight:bold"> Courses Taught </span></h1>
-            <section>
-              <div class="table-wrapper">
-                <table>
-                  <thead>
-                    <tr>
-                      <th><span style="color:BLACK; font-weight:bold">Date</span></th>
-                      <th><span style="color:BLACK; font-weight:bold">Course</span></th>
-                      <th><span style="color:BLACK; font-weight:bold">Institute</span></th>
-                      <th><span style="color:BLACK; font-weight:bold">Location</span></th>
-                      <th><span style="color:BLACK; font-weight:bold">Comments</span></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-
-                    <tr>
-                      <td>Spring 2014/Fall 2014/Spring 2015</td>
-                      <td>Basic Calculus</td>
-                      <td>UTK</td>
-                      <td>Knoxville, TN, USA</td>
-                      <td>Taught it 5 times as a TA</td>
-                    </tr>
-
-                    <tr>
-                      <td>Fall 2014</td>
-                      <td>College Algebra</td>
-                      <td>UTK</td>
-                      <td>Knoxville, TN, USA</td>
-                      <td>Taught it 2 times as a TA</td>
-                    </tr>
-
-                    <tr>
-                      <td>Spring 2016</td>
-                      <td>Calculus II</td>
-                      <td>UTK</td>
-                      <td>Knoxville, TN, USA</td>
-                      <td>Taught it 3 times as a TA</td>
-                    </tr>
-
-                    <tr>
-                      <td>Fall 2015</td>
-                      <td>College Algebra</td>
-                      <td>UTK</td>
-                      <td>Knoxville, TN, USA</td>
-                      <td>Taught it 2 times as a full instructor</td>
-                    </tr>
-
-                    <tr>
-                      <td>Spring 2016</td>
-                      <td>Calculus II</td>
-                      <td>UTK</td>
-                      <td>Knoxville, TN, USA</td>
-                      <td>Taught it 2 times as a full instructor</td>
-                    </tr>
-
-
-                    <tr>
-                      <td>Fall 2018</td>
-                      <td>Calculus I</td>
-                      <td>UTK</td>
-                      <td>Knoxville, TN, USA</td>
-                      <td>Taught it 2 times as a full instructor</td>
-                    </tr>
-
-
-                    <tr>
-                      <td>Spring 2013</td>
-                      <td>College Algebra</td>
-                      <td>PPU</td>
-                      <td>Hebron, Palestine</td>
-                      <td>Taught it 2 times as a full instructor</td>
-                    </tr>
-
-                    <tr>
-                      <td>Spring 2013</td>
-                      <td>Complex Numbers</td>
-                      <td>PPU</td>
-                      <td>Hebron, Palestine</td>
-                      <td>Taught it 1 time as a full instructor</td>
-                    </tr>
-
-
-                  </tbody>
-                </table>
-              </div>
-          </span>
-        </div>
-      </section>
-    </section>
-
-
-    <!-- Contact -->
-    <section id="contactme" class="wrapper style1 fade-up">
-      <div class="inner">
-        <h2>Get in touch</h2>
-        <p></p>
-        <div class="split style1">
-          <section>
-            <ul class="contact">
-              <li>
-                <h3>Address</h3>
-                <span>King Abdullah University of Science and Technology<br />
-                  Thuwal, Jeddah, 23953<br />
-                  Saudi Arabia</span>
-              </li>
-              <li>
-                <h3>Email</h3>
-                <a href="#">hamza.ruzayqat at kaust.edu.sa</a>
-              </li>
-              <!--
-										<li>
-											<h3>Phone</h3>
-											<span>(000) 000-0000</span>
-										</li>
-									-->
-              <li>
-                <h3>Social</h3>
-                <ul class="icons">
-                  <!--	<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>  -->
-                  <!--	<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li> -->
-                  <li><a href="https://github.com/ruzayqat" target="_blank" class="icon brands fa-github"><span
-                        class="label">GitHub</span></a></li>
-                  <!-- <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
-                  <li><a href="https://www.linkedin.com/in/hamza-ruzayqat/" target="_blank"
-                      class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                </ul>
-              </li>
-            </ul>
-          </section>
+          </li>
+        </ul>
+      </div>
+
+      <div class="journals">
+        <h3>Selected journals (SCImago) with SJR index</h3>
+        <div class="journal-grid">
+          <a href="https://www.scimagojr.com/journalsearch.php?q=21100218107&amp;tip=sid&amp;exact=no" target="_blank"
+            rel="noopener" title="Journal of Advances in Modeling Earth Systems"><img
+              src="https://www.scimagojr.com/journal_img.php?id=21100218107"
+              alt="Journal of Advances in Modeling Earth Systems — SCImago Journal &amp; Country Rank"
+              loading="lazy" /></a>
+          <a href="https://www.scimagojr.com/journalsearch.php?q=26425&amp;tip=sid&amp;exact=no" target="_blank"
+            rel="noopener"><img src="https://www.scimagojr.com/journal_img.php?id=26425"
+              alt="SIAM Journal on Scientific Computing" loading="lazy" /></a>
+          <a href="https://www.scimagojr.com/journalsearch.php?q=13191&amp;tip=sid&amp;exact=no" target="_blank"
+            rel="noopener"><img src="https://www.scimagojr.com/journal_img.php?id=13191"
+              alt="Journal of Computational Physics" loading="lazy" /></a>
+          <a href="https://www.scimagojr.com/journalsearch.php?q=14082&amp;tip=sid&amp;exact=no" target="_blank"
+            rel="noopener"><img src="https://www.scimagojr.com/journal_img.php?id=14082"
+              alt="Quarterly Journal of the Royal Meteorological Society" loading="lazy" /></a>
+          <a href="https://www.scimagojr.com/journalsearch.php?q=5100155074&amp;tip=sid&amp;exact=no" target="_blank"
+            rel="noopener"><img src="https://www.scimagojr.com/journal_img.php?id=5100155074"
+              alt="Journal of Chemical Theory and Computation" loading="lazy" /></a>
+          <a href="https://www.scimagojr.com/journalsearch.php?q=26405&amp;tip=sid&amp;exact=no" target="_blank"
+            rel="noopener"><img src="https://www.scimagojr.com/journal_img.php?id=26405"
+              alt="SIAM Journal on Control and Optimization" loading="lazy" /></a>
+          <a href="https://www.scimagojr.com/journalsearch.php?q=25092&amp;tip=sid&amp;exact=no" target="_blank"
+            rel="noopener"><img src="https://www.scimagojr.com/journal_img.php?id=25092"
+              alt="Mathematics of Computation" loading="lazy" /></a>
+          <a href="https://www.scimagojr.com/journalsearch.php?q=21100830444&amp;tip=sid&amp;exact=no" target="_blank"
+            rel="noopener"><img src="https://www.scimagojr.com/journal_img.php?id=21100830444"
+              alt="SIAM/ASA Journal on Uncertainty Quantification" loading="lazy" /></a>
+          <a href="https://www.scimagojr.com/journalsearch.php?q=23614&amp;tip=sid&amp;exact=no" target="_blank"
+            rel="noopener"><img src="https://www.scimagojr.com/journal_img.php?id=23614" alt="Statistics and Computing"
+              loading="lazy" /></a>
         </div>
       </div>
-    </section>
-
-  </div>
-
-  <!-- Footer -->
-  <footer id="footer" class="wrapper style1-alt">
-    <div class="inner">
-      <ul class="menu">
-        <li>&copy; Hamza Ruzayqat. All rights reserved.</li>
-      </ul>
     </div>
+  </section>
+
+  <!-- Software + Collaborators -->
+  <section class="block soft" id="software">
+    <div class="container two-col">
+      <div>
+        <span class="kicker">Software</span>
+        <h2>Open-source code</h2>
+        <p style="color:var(--muted)">Reproducible implementations accompanying my papers.</p>
+        <div class="repo-grid">
+          <a class="repo" href="https://github.com/ruzayqat/LSMCMC" target="_blank" rel="noopener"><svg>
+              <use href="#i-github" />
+            </svg>Local Sequential MCMC for Data Assimilation</a>
+          <a class="repo" href="https://github.com/ruzayqat/filtering_unknown_data_locations" target="_blank"
+            rel="noopener"><svg>
+              <use href="#i-github" />
+            </svg>Sequential MCMC for Lagrangian Data Assimilation</a>
+          <a class="repo" href="https://github.com/ruzayqat/laggedPF" target="_blank" rel="noopener"><svg>
+              <use href="#i-github" />
+            </svg>Lagged Particle Filter for High-Dimensional Models</a>
+          <a class="repo" href="https://github.com/ruzayqat/unbiased_uld" target="_blank" rel="noopener"><svg>
+              <use href="#i-github" />
+            </svg>Unbiased Estimation with Underdamped Langevin Dynamics</a>
+          <a class="repo" href="https://github.com/ruzayqat/unbiased_sfs" target="_blank" rel="noopener"><svg>
+              <use href="#i-github" />
+            </svg>Unbiased Estimation with a Class of Diffusion Processes</a>
+          <a class="repo" href="https://github.com/ruzayqat/log_nc" target="_blank" rel="noopener"><svg>
+              <use href="#i-github" />
+            </svg>Log-Normalizing Constant Estimation with EnKBF</a>
+          <a class="repo" href="https://github.com/ruzayqat/log_mlenkbfnc" target="_blank" rel="noopener"><svg>
+              <use href="#i-github" />
+            </svg>Multilevel EnKBF Normalizing Constants</a>
+          <a class="repo" href="https://github.com/ruzayqat/score_based_par_est" target="_blank" rel="noopener"><svg>
+              <use href="#i-github" />
+            </svg>Score-Based Parameter Estimation</a>
+        </div>
+      </div>
+
+      <div>
+        <span class="kicker">Network</span>
+        <h2>Collaborators</h2>
+        <p style="color:var(--muted)">&nbsp;</p>
+        <ul class="collab">
+          <li><a href="https://scholar.google.com/scholar?q=Elsiddig+Awadelkarim" target="_blank"
+              rel="noopener">Elsiddig Awadelkarim</a><span>KAUST, CEMSE</span></li>
+          <li><a href="https://www.ucl.ac.uk/statistics/people/alexandrosbeskos" target="_blank"
+              rel="noopener">Alexandros Beskos</a><span>UCL, Statistical Science</span></li>
+          <li><a href="https://scholar.google.com/citations?user=GNOopfAAAAAJ&amp;hl=en" target="_blank"
+              rel="noopener">David Bolin</a><span>KAUST, CEMSE</span></li>
+          <li><a href="https://scholar.google.com/scholar?q=David+Bortz+Colorado" target="_blank"
+              rel="noopener">David Bortz</a><span>University of Colorado Boulder, Applied Mathematics</span></li>
+          <li><a href="https://scholar.google.com/scholar?q=Hristo+G.+Chipilski" target="_blank"
+              rel="noopener">Hristo G. Chipilski</a><span>Florida State University</span></li>
+          <li><a href="https://www.ma.ic.ac.uk/~dcrisan/" target="_blank" rel="noopener">Dan Crisan</a><span>Imperial
+              College London, Mathematics</span></li>
+          <li><a href="https://people.bordeaux.inria.fr/pierre.delmoral/research.html" target="_blank"
+              rel="noopener">Pierre Del Moral</a><span>INRIA Bordeaux</span></li>
+          <li><a href="https://scholar.google.com/scholar?q=Vanja+Dukic+Colorado" target="_blank"
+              rel="noopener">Vanja Dukic</a><span>University of Colorado Boulder, Applied Mathematics</span></li>
+          <li><a href="https://cemse.kaust.edu.sa/aanslab/people/person/aimad-er-raiy" target="_blank"
+              rel="noopener">Aimad Er-Raiy</a><span>Airbus, France</span></li>
+          <li><a href="http://english.zuel.edu.cn/school/listm.htm" target="_blank" rel="noopener">Shulan
+              Hu</a><span>ZUEL, Statistics &amp; Mathematics</span></li>
+          <li><a href="https://www.ma.imperial.ac.uk/~nkantas/" target="_blank" rel="noopener">Nikolas
+              Kantas</a><span>Imperial College London, Mathematics</span></li>
+          <li><a href="https://scholar.google.com/citations?user=KuvOKcwAAAAJ&amp;hl=en" target="_blank"
+              rel="noopener">Omar Knio</a><span>KAUST, CEMSE</span></li>
+          <li><a href="https://scholar.google.com/citations?user=KsD9pdkAAAAJ&amp;hl=en" target="_blank"
+              rel="noopener">Wenyu Lei</a><span>UESTC, Mathematical Sciences</span></li>
+          <li><a href="https://web.math.utk.edu/~schulze/" target="_blank" rel="noopener">Tim Schulze</a><span>University
+              of Tennessee, Mathematics</span></li>
+          <li><a href="https://scholar.google.com/citations?user=hJEdkhYAAAAJ&amp;hl=en" target="_blank"
+              rel="noopener">George Turkiyyah</a><span>KAUST, CEMSE</span></li>
+          <li><a href="http://english.zuel.edu.cn/school/listm.htm" target="_blank" rel="noopener">Xinyu
+              Wang</a><span>ZUEL, Business</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Talks -->
+  <section class="block" id="talks">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Talks</span>
+          <h2>Invited &amp; conference talks</h2>
+        </div>
+        <p><span data-count="talks">42</span> talks at universities and international meetings across the US, Europe and the Middle East.</p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Date</th><th>Event</th><th>Location</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="date">Jan 2027</td><td><span class="tag gold">Upcoming</span><span class="tag">Conference</span>31st Conference on Integrated Observing and Assimilation Systems for the Atmosphere, Oceans, and Land Surface (IOAS-AOLS), AMS Annual Meeting</td><td>Denver, CO, USA</td></tr>
+            <tr><td class="date">Dec 2026</td><td><span class="tag gold">Upcoming</span><span class="tag">Conference</span>CFE-CMStatistics 2026, co-organizer (with Vanja Dukic) of the session on Inference in Stochastic Differential Equations</td><td>Berlin, Germany</td></tr>
+            <tr><td class="date">May 2026</td><td><span class="tag">Seminar</span>Department of Applied Mathematics (APPM), University of Colorado Boulder: Learning SDEs from noisy partial data</td><td>Boulder, CO, USA</td></tr>
+            <tr><td class="date">May 2026</td><td><span class="tag">Invited</span><span class="tag">Conference</span>54th Barrett Lectures, University of Tennessee</td><td>Knoxville, TN, USA</td></tr>
+            <tr><td class="date">Nov 2025</td><td><span class="tag">Workshop</span>KAUST 2025 Workshop on Statistics: Whittle&ndash;Matérn fields with variable smoothness</td><td>Thuwal, Saudi Arabia</td></tr>
+            <tr><td class="date">Jul 2025</td><td><span class="tag">Conference</span>International Conference on Monte Carlo Methods and Applications (MCM 2025), speaker and session organizer</td><td>Chicago, IL, USA</td></tr>
+            <tr><td class="date">May 2025</td><td><span class="tag">Conference</span>ISDA-Online: Open Session on Non-linear Data Assimilation</td><td>Online</td></tr>
+            <tr><td class="date">May 2025</td><td><span class="tag">Conference</span>9th International Arab Conference on Mathematics and Computations, Zarqa University</td><td>Zarqa, Jordan</td></tr>
+            <tr><td class="date">Mar 2025</td><td><span class="tag">Conference</span>SIAM CSE25, speaker and minisymposium organizer on Data Assimilation</td><td>Fort Worth, TX, USA</td></tr>
+            <tr><td class="date">Feb 2025</td><td><span class="tag">Seminar</span>Department of Mathematics, Texas A&amp;M University</td><td>College Station, TX, USA</td></tr>
+            <tr><td class="date">Feb 2025</td><td><span class="tag">Colloquium</span>Department of Scientific Computing, Florida State University</td><td>Tallahassee, FL, USA</td></tr>
+            <tr><td class="date">Feb 2025</td><td><span class="tag">Conference</span>Fourth International Conference on Mathematics and Statistics (ICMS25), American University of Sharjah</td><td>Sharjah, UAE</td></tr>
+            <tr><td class="date">Feb 2025</td><td><span class="tag">Seminar</span>UQ Seminar, RWTH Aachen University (hybrid)</td><td>Aachen, Germany</td></tr>
+          </tbody>
+        </table>
+        <details class="table-more">
+          <summary>Show all earlier talks</summary>
+          <table>
+            <tbody>
+              <tr><td class="date">Dec 2024</td><td><span class="tag">Conference</span>14th AIMS Conference on Dynamical Systems, Differential Equations and Applications, NYU Abu Dhabi</td><td>Abu Dhabi, UAE</td></tr>
+              <tr><td class="date">Dec 2024</td><td><span class="tag">Conference</span>MathConnect 2024: International Conference on Mathematics and its Applications, KFUPM</td><td>Dhahran, Saudi Arabia</td></tr>
+              <tr><td class="date">Sep 2024</td><td><span class="tag">Conference</span>ISDA-Online: Open Session on Data Assimilation</td><td>Online</td></tr>
+              <tr><td class="date">Mar 2024</td><td><span class="tag">Seminar</span>Department of Statistics and Data Science, Washington University in St. Louis</td><td>St. Louis, MO, USA</td></tr>
+              <tr><td class="date">Jan 2024</td><td><span class="tag">Invited</span><span class="tag">Seminar</span>ISE Department, University of Illinois Urbana-Champaign</td><td>Urbana, IL, USA</td></tr>
+              <tr><td class="date">Oct 2023</td><td><span class="tag">Conference</span>International Symposium on Data Assimilation (ISDA)</td><td>Bologna, Italy</td></tr>
+              <tr><td class="date">Sep 2023</td><td><span class="tag">Invited</span><span class="tag">Seminar</span>Stochastic Seminar, New York University Abu Dhabi</td><td>Abu Dhabi, UAE</td></tr>
+              <tr><td class="date">Jun 2023</td><td><span class="tag">Invited</span><span class="tag">Workshop</span>24th STUOD Sandbox Workshop on Data Assimilation, Imperial College London</td><td>London, UK</td></tr>
+              <tr><td class="date">Jan 2023</td><td><span class="tag">Conference</span>Joint Mathematics Meetings (JMM 2023)</td><td>Boston, MA, USA</td></tr>
+              <tr><td class="date">Nov 2022</td><td><span class="tag">Invited</span><span class="tag">Seminar</span>Applied Mathematics and Computational Sciences, CEMSE, KAUST</td><td>Thuwal, Saudi Arabia</td></tr>
+              <tr><td class="date">Sep 2022</td><td><span class="tag">Seminar</span>Department of Statistics, Imperial College London</td><td>London, UK</td></tr>
+              <tr><td class="date">Sep 2022</td><td><span class="tag">Workshop</span>3rd Stochastic Transport in Upper Ocean Dynamics Annual Workshop, Imperial College London</td><td>London, UK</td></tr>
+              <tr><td class="date">Jul 2022</td><td><span class="tag">Conference</span>7th Palestinian Conference on Modern Trends in Mathematics, Birzeit University</td><td>Birzeit, Palestine</td></tr>
+              <tr><td class="date">Jul 2022</td><td><span class="tag">Conference</span>15th International Conference on Monte Carlo and Quasi-Monte Carlo Methods (MCQMC)</td><td>Linz, Austria</td></tr>
+              <tr><td class="date">Jun 2022</td><td><span class="tag">Conference</span>IMS Annual Meeting in Probability and Statistics</td><td>London, UK</td></tr>
+              <tr><td class="date">Jun 2022</td><td><span class="tag">Workshop</span>Ensemble Kalman Filter (EnKF) Workshop</td><td>Balestrand, Norway</td></tr>
+              <tr><td class="date">Apr 2022</td><td><span class="tag">Invited</span><span class="tag">Seminar</span>Seminar on Data Science, University of Tennessee</td><td>Knoxville, TN, USA</td></tr>
+              <tr><td class="date">Apr 2022</td><td><span class="tag">Conference</span>SIAM Conference on Uncertainty Quantification (UQ22)</td><td>Atlanta, GA, USA</td></tr>
+              <tr><td class="date">Dec 2021</td><td><span class="tag">Invited</span><span class="tag">Seminar</span>Graduate Seminar, KAUST (virtual)</td><td>Thuwal, Saudi Arabia</td></tr>
+              <tr><td class="date">Nov 2021</td><td><span class="tag">Guest lecture</span>Guest Lecturer, KAUST</td><td>Thuwal, Saudi Arabia</td></tr>
+              <tr><td class="date">Nov 2021</td><td><span class="tag">Invited</span><span class="tag">Seminar</span>Seminar on Optimization and Machine Learning, New Jersey Institute of Technology (virtual)</td><td>Newark, NJ, USA</td></tr>
+              <tr><td class="date">Aug 2021</td><td><span class="tag">Conference</span>13th International Conference on Monte Carlo Methods and Applications, University of Mannheim (virtual)</td><td>Mannheim, Germany</td></tr>
+              <tr><td class="date">Mar 2019</td><td><span class="tag">Invited</span><span class="tag">Seminar</span>Department of Mathematics, Colorado State University</td><td>Fort Collins, CO, USA</td></tr>
+              <tr><td class="date">Oct 2018</td><td><span class="tag">Seminar</span>Seminar on Numerical Mathematics, University of Tennessee</td><td>Knoxville, TN, USA</td></tr>
+              <tr><td class="date">Oct 2018</td><td><span class="tag">Invited</span><span class="tag">Seminar</span>Department of Materials Science and Engineering, University of Tennessee</td><td>Knoxville, TN, USA</td></tr>
+              <tr><td class="date">Jul 2018</td><td><span class="tag">Conference</span>SIAM Conference on Mathematical Aspects of Materials Science</td><td>Portland, OR, USA</td></tr>
+              <tr><td class="date">Jun 2018</td><td><span class="tag">Workshop</span>Mathematical Problems in Industry Workshop, Claremont Center for the Mathematical Sciences</td><td>Claremont, CA, USA</td></tr>
+              <tr><td class="date">Feb 2018</td><td><span class="tag">Seminar</span>Seminar on Numerical Mathematics, University of Tennessee</td><td>Knoxville, TN, USA</td></tr>
+              <tr><td class="date">Sep 2017</td><td><span class="tag">Seminar</span>Seminar on Numerical Mathematics, University of Tennessee</td><td>Knoxville, TN, USA</td></tr>
+              <tr><td class="date">Jun 2017</td><td><span class="tag">Workshop</span>GSMMC 2017 Summer Camp, Rensselaer Polytechnic Institute</td><td>Troy, NY, USA</td></tr>
+              <tr><td class="date">Nov 2016</td><td><span class="tag">Seminar</span>Seminar on Numerical Mathematics, University of Tennessee</td><td>Knoxville, TN, USA</td></tr>
+            </tbody>
+          </table>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaching -->
+  <section class="block soft" id="teaching">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Teaching</span>
+          <h2>Courses taught</h2>
+        </div>
+        <p>Instructor of record and teaching assistant for undergraduate mathematics courses.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Term</th><th>Course</th><th>Role</th><th>Institution</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="date">Fall 2018</td><td>Calculus I</td><td>Instructor (2 sections)</td><td>University of Tennessee, Knoxville</td></tr>
+            <tr><td class="date">Spring 2016</td><td>Calculus II</td><td>Instructor (2 sections)</td><td>University of Tennessee, Knoxville</td></tr>
+            <tr><td class="date">Fall 2015</td><td>College Algebra</td><td>Instructor (2 sections)</td><td>University of Tennessee, Knoxville</td></tr>
+            <tr><td class="date">2014&ndash;2016</td><td>Basic Calculus, College Algebra, Calculus II</td><td>Teaching assistant (10 sections)</td><td>University of Tennessee, Knoxville</td></tr>
+            <tr><td class="date">Spring 2013</td><td>College Algebra; Complex Numbers</td><td>Instructor (3 sections)</td><td>Palestine Polytechnic University, Hebron</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="block" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Contact</span>
+          <h2>Get in touch</h2>
+        </div>
+      </div>
+      <div class="contact">
+        <div>
+          <h4>Email</h4>
+          <p><a href="mailto:hamza.ruzayqat@kaust.edu.sa">hamza.ruzayqat@kaust.edu.sa</a></p>
+        </div>
+        <div>
+          <h4>Address</h4>
+          <p>King Abdullah University of Science and Technology<br />Thuwal 23955, Saudi Arabia</p>
+        </div>
+        <div>
+          <h4>Online</h4>
+          <p class="socials">
+            <a href="https://scholar.google.com/citations?user=zThjU94AAAAJ&amp;hl=en" target="_blank" rel="noopener"><svg><use href="#i-scholar" /></svg>Google Scholar</a>
+            <a href="https://github.com/ruzayqat" target="_blank" rel="noopener"><svg>
+                <use href="#i-github" />
+              </svg>GitHub</a>
+            <a href="https://www.linkedin.com/in/hamza-ruzayqat/" target="_blank" rel="noopener"><svg>
+                <use href="#i-linkedin" />
+              </svg>LinkedIn</a>
+            <a href="https://arxiv.org/a/ruzayqat_h_1" target="_blank" rel="noopener"><svg>
+                <use href="#i-doc" />
+              </svg>arXiv</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">&copy; 2026 Hamza Ruzayqat</div>
   </footer>
-
-  <!-- Scripts -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/jquery.scrollex.min.js"></script>
-  <script src="assets/js/jquery.scrolly.min.js"></script>
-  <script src="assets/js/browser.min.js"></script>
-  <script src="assets/js/breakpoints.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <script src="assets/js/main.js"></script>
-
+  <!-- Keep headline numbers in sync with the lists below (no need to edit them by hand) -->
+  <script>
+    (function () {
+      var q = function (s) { return document.querySelectorAll(s).length; };
+      var talks = [].filter.call(document.querySelectorAll("#talks tbody tr"), function (tr) {
+        return ![].some.call(tr.querySelectorAll(".tag"), function (t) { return /upcoming/i.test(t.textContent); });
+      }).length;
+      var counts = {
+        journal: q("[data-group=journal] > li"),
+        preprint: q("[data-group=preprint] > li"),
+        talks: talks,
+        collab: q(".collab > li"),
+        repos: q(".repo")
+      };
+      document.querySelectorAll("[data-count]").forEach(function (el) {
+        var n = counts[el.getAttribute("data-count")];
+        if (n) el.textContent = n;
+      });
+    })();
+  </script>
 </body>
 
 </html>
