@@ -210,6 +210,8 @@ details.table-more > summary::-webkit-details-marker { display: none; }
 .socials svg { width: 18px; height: 18px; fill: currentColor; }
 
 footer { padding: 28px 0; color: var(--muted); font-size: .85rem; border-top: 1px solid var(--line); }
+.footer-row { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+#visitor-count b { color: var(--ink); font-weight: 600; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 980px) {

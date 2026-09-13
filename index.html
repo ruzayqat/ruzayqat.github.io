@@ -24,7 +24,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css?v=8" />
+  <link rel="stylesheet" href="assets/css/site.css?v=9" />
 </head>
 
 <body>
@@ -790,7 +790,10 @@
   </section>
 
   <footer>
-    <div class="container">&copy; 2026 Hamza Ruzayqat</div>
+    <div class="container footer-row">
+      <span>&copy; 2026 Hamza Ruzayqat</span>
+      <span id="visitor-count" hidden><b></b> visitors since Sep 13, 2026</span>
+    </div>
   </footer>
   <!-- Keep headline numbers in sync with the lists below (no need to edit them by hand) -->
   <script>
@@ -811,6 +814,19 @@
         if (n) el.textContent = n;
       });
     })();
+  </script>
+  <!-- Visitor counter: GoatCounter (cookie-free). Dashboard: https://ruzayqat.goatcounter.com -->
+  <script data-goatcounter="https://ruzayqat.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+  <script>
+    fetch("https://ruzayqat.goatcounter.com/counter/TOTAL.json")
+      .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+      .then(function (d) {
+        if (!d || !d.count) return;
+        var el = document.getElementById("visitor-count");
+        el.querySelector("b").textContent = d.count;
+        el.hidden = false;
+      })
+      .catch(function () { /* counter unavailable (not set up yet or blocked): keep hidden */ });
   </script>
 </body>
 
