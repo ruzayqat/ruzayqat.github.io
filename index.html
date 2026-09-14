@@ -325,12 +325,13 @@
         </article>
 
         <article class="card">
-          <div class="thumb"><img src="images/web/fig-card4.jpg" alt="Posterior mean of a log-permeability field: pCN-MCMC vs single-level and unbiased Schrödinger–Föllmer samplers" loading="lazy" /></div>
+          <div class="thumb"><img src="images/web/fig-sfs3d.jpg" alt="3D surface of the estimated log-permeability field from the unbiased Schr&ouml;dinger&ndash;F&ouml;llmer sampler" loading="lazy" /></div>
           <div class="body">
             <h4>Unbiased &amp; multilevel Monte Carlo</h4>
-            <p>Randomized estimators that remove both time-discretization and drift-approximation bias of the
-              Schr&ouml;dinger&ndash;F&ouml;llmer sampler. Pictured: log-permeability in an elliptic PDE inverse problem;
-              the unbiased sampler reaches the same RMSE in about 33.5&nbsp;h versus 168&nbsp;h.</p>
+            <p>The Schr&ouml;dinger&ndash;F&ouml;llmer sampler draws from a target distribution by simulating a diffusion
+              bridge that starts at zero and ends, at time one, distributed exactly as the target. Our randomized
+              estimators remove both its time-discretization bias and the bias from approximating its drift. Pictured:
+              the estimated log-permeability field of an elliptic PDE inverse problem (3D view).</p>
             <p class="paper-ref"><a href="https://arxiv.org/abs/2203.03013" target="_blank" rel="noopener">J. Comput. Phys., 2023</a> &middot; <a href="https://arxiv.org/abs/2206.07202" target="_blank" rel="noopener">SIAM J. Sci. Comput., 2023</a></p>
           </div>
         </article>
