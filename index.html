@@ -24,7 +24,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css?v=9" />
+  <link rel="stylesheet" href="assets/css/site.css?v=12" />
 </head>
 
 <body>
@@ -108,19 +108,29 @@
         </div>
       </div>
 
-      <figure class="hero-media" style="margin:0">
-        <video autoplay muted loop playsinline preload="auto" width="800" height="514" poster="images/web/lsmcmc_poster.jpg" aria-label="Animation of local sequential MCMC assimilating drifter and SWOT observations in the North Atlantic">
-          <source src="images/web/lsmcmc_animation.mp4" type="video/mp4" />
-          <img src="images/web/lsmcmc_animation.gif" alt="Animation of local sequential MCMC assimilating drifter and SWOT observations in the North Atlantic" />
-        </video>
-        <figcaption>Local Sequential MCMC assimilating real drifter and SWOT satellite observations of the North
-          Atlantic (Aug 2024).</figcaption>
-      </figure>
+      <div class="hero-videos">
+        <figure class="hero-media" style="margin:0">
+          <video autoplay muted loop playsinline preload="auto" width="800" height="514" poster="images/web/lsmcmc_poster.jpg" aria-label="Animation of local sequential MCMC assimilating drifter and SWOT observations in the North Atlantic">
+            <source src="images/web/lsmcmc_animation.mp4" type="video/mp4" />
+            <img src="images/web/lsmcmc_animation.gif" alt="Animation of local sequential MCMC assimilating drifter and SWOT observations in the North Atlantic" />
+          </video>
+          <figcaption>Local Sequential MCMC assimilating real drifter and SWOT satellite observations of the North
+            Atlantic (Aug 2024).</figcaption>
+        </figure>
+        <figure class="hero-media" style="margin:0">
+          <video autoplay muted loop playsinline preload="auto" width="1200" height="772" poster="images/web/waives_poster.jpg" aria-label="Animation of WAIVES learning the drift and diffusion of a double-well SDE from one noisy trajectory, compared with naive weak-form least squares">
+            <source src="images/web/waives_animation.mp4" type="video/mp4" />
+            <img src="images/web/waives_poster.jpg" alt="WAIVES recovers the drift of a double-well SDE while naive weak-form least squares returns a flat drift" />
+          </video>
+          <figcaption><b>New: WAIVES.</b> Learning a double-well SDE from one noisy trajectory. Naive weak-form least
+            squares erases the drift; WAIVES recovers drift and diffusion. <a href="#waives">How it works</a></figcaption>
+        </figure>
+      </div>
     </div>
 
     <div class="container">
       <div class="stats">
-        <div class="stat"><b><span data-count="journal">16</span><span class="sep">+</span><span data-count="preprint">3</span></b><span>articles in top numerical &amp; applied mathematics journals + preprints</span></div>
+        <div class="stat"><b><span data-count="journal">16</span><span class="sep">+</span><span data-count="preprint">4</span></b><span>articles in top numerical &amp; applied mathematics journals + preprints</span></div>
         <div class="stat"><b data-count="talks">43</b><span>invited &amp; conference talks</span></div>
         <div class="stat"><b data-count="collab">16</b><span>international collaborators</span></div>
         <div class="stat"><b data-count="repos">8</b><span>open-source research codes</span></div>
@@ -162,6 +172,13 @@
           <li><time>Dec 2026</time>
             <div><span class="tag gold">Upcoming</span>Co-organizing (with Vanja Dukic) a minisymposium on Inference in Stochastic Differential Equations at CFE-CMStatistics 2026, HTW Berlin (Dec 12&ndash;14, 2026).
               <a href="https://www.cmstatistics.org/CFECMStatistics2026/" target="_blank" rel="noopener">Conference</a></div>
+          </li>
+          <li class="highlight"><time>Nov 2026</time>
+            <div><span class="tag gold">New preprint</span><b>WAIVES</b>, with David Bortz and Vanja Duki&cacute;:
+              fast, likelihood-free learning of the drift and diffusion of an SDE from a single noisy trajectory,
+              using weak-form instrumental variables.
+              <a href="#waives">Highlights</a> &middot;
+              <a href="https://arxiv.org/abs/2611.23951" target="_blank" rel="noopener">arXiv:2611.23951</a></div>
           </li>
           <li><time>Nov 2026</time>
             <div><span class="tag">Workshop</span>Polytopal Element Methods in Mathematics and Engineering (POEMS 2026),
@@ -270,6 +287,107 @@
           properties, such as convergence, unbiasedness or stability with respect to dimension, that remain
           computationally practical for realistic models.</p>
       </div>
+
+      <!-- Spotlight: WAIVES -->
+      <article class="spotlight" id="waives">
+        <div class="spot-head">
+          <span class="kicker">New preprint &middot; Inference for SDEs</span>
+          <h3>WAIVES: learning stochastic dynamics from one noisy trajectory</h3>
+          <p class="lede">Weak-form methods made inference for ODEs fast and robust to noise by integrating the
+            equations against smooth test functions instead of differentiating noisy data. WAIVES brings this idea to
+            stochastic differential equations. From a single trajectory, sampled at discrete times and observed with
+            noise, it recovers the nonlinear drift and the diffusion with one linear solve, with no likelihood,
+            filtering or simulation, and it returns standard errors and calibrated confidence intervals.</p>
+          <div class="spot-links">
+            <a class="btn-sm primary" href="https://arxiv.org/abs/2611.23951" target="_blank" rel="noopener">arXiv:2611.23951</a>
+            <a class="btn-sm" href="https://arxiv.org/pdf/2611.23951" target="_blank" rel="noopener">PDF</a>
+            <a class="btn-sm" href="https://doi.org/10.5281/zenodo.24369122" target="_blank" rel="noopener">Code (Zenodo)</a>
+            <span class="spot-authors">with David M. Bortz and Vanja Duki&cacute;</span>
+          </div>
+        </div>
+
+        <div class="spot-grid">
+          <figure class="feature-media" style="margin:0">
+            <img src="images/web/waives-windows.jpg" width="1043" height="568" loading="lazy"
+              alt="Window layout: instrument windows with test functions psi, a small gap delta, then the target window with test function phi" />
+            <figcaption>Each target window (orange, test function &phi;) is paired with instrument windows just before
+              it (blue, &psi;), separated by a small gap &delta;. The window pairs tile the whole record.</figcaption>
+          </figure>
+          <div class="spot-steps">
+            <div class="step"><span class="step-n">1</span>
+              <div>
+                <h4>The weak form</h4>
+                <p>Multiply the SDE by a smooth test function supported on a short time window and integrate by parts.
+                  Derivatives fall on the known test function rather than on the noisy data, and each window gives one
+                  row of a linear regression for the drift parameters.</p>
+              </div>
+            </div>
+            <div class="step warn"><span class="step-n">2</span>
+              <div>
+                <h4>The trap: endogeneity</h4>
+                <p>The regression error is a stochastic integral over the window, built from the same Brownian
+                  increments as the regressors. Weak-form least squares is therefore biased and inconsistent: for any
+                  time-reversible diffusion, including every stationary scalar one, it converges to zero drift however
+                  long the record.</p>
+              </div>
+            </div>
+            <div class="step ok"><span class="step-n">3</span>
+              <div>
+                <h4>The fix: instruments from disjoint windows</h4>
+                <p>Instrumental variables, a classical tool from econometrics. Weak-form integrals over a nearby,
+                  earlier, disjoint window are correlated with the regressors, because the process remembers, but
+                  independent of the error, because Brownian increments over disjoint intervals are independent. The
+                  resulting estimator is consistent and asymptotically normal, and it separates measurement noise from
+                  the randomness of the dynamics.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="spot-stats">
+          <div><b>1</b><span>linear solve: no likelihood, filtering or simulation</span></div>
+          <div><b>&asymp;10&times;</b><span>faster than exact-likelihood fitting where a likelihood exists</span></div>
+          <div><b>9</b><span>test systems, from scalar diffusions to a 120-dimensional Lorenz-96 model</span></div>
+          <div><b>&asymp;95%</b><span>coverage of nominal 95% confidence intervals</span></div>
+        </div>
+
+        <div class="spot-figs">
+          <figure class="feature-media">
+            <img src="images/web/waives-systems.jpg" width="1200" height="746" loading="lazy"
+              alt="Latent paths and noisy observations for the Ornstein-Uhlenbeck, double-well, stochastic Lorenz-63 and FitzHugh-Nagumo systems" />
+            <figcaption>Noisy observations (orange) of the latent path (blue) for four of the nine test systems:
+              Ornstein&ndash;Uhlenbeck, double-well, stochastic Lorenz-63 and FitzHugh&ndash;Nagumo.</figcaption>
+          </figure>
+          <figure class="feature-media">
+            <img src="images/web/waives-histograms.jpg" width="1400" height="730" loading="lazy"
+              alt="Histograms of WAIVES estimates for nine systems, each centred on the true value with a Gaussian fit" />
+            <figcaption>Accuracy across all nine systems: estimates of one representative parameter from 1000
+              independent trajectories (200 for Lorenz-96) are centred on the truth (red dashed) and close to Gaussian
+              (insets: normal Q&ndash;Q plots).</figcaption>
+          </figure>
+          <figure class="feature-media wide">
+            <img src="images/web/waives-amo.jpg" width="2000" height="572" loading="lazy"
+              alt="Atlantic Multidecadal Oscillation index 1856 to 2023 and the drift estimated by WAIVES with uncertainty bands" />
+            <figcaption>Real data: 167 years of the Atlantic Multidecadal Oscillation, a North Atlantic
+              sea-surface-temperature index (A). WAIVES estimates a restoring rate &kappa;&#770; = 0.76 yr<sup>&minus;1</sup>
+              (95% interval 0.20&ndash;1.31) (B). Affine and cubic drift fits agree within their uncertainty bands, so
+              the record cannot distinguish a single well from a shallow double well.</figcaption>
+          </figure>
+          <figure class="feature-media wide">
+            <img src="images/web/waives-coverage.jpg" width="2000" height="590" loading="lazy"
+              alt="Standard errors shrinking with record length and confidence-interval coverage near 95 percent for two systems" />
+            <figcaption>Calibrated uncertainty: plug-in standard errors track the true sampling spread and shrink like
+              1/&radic;T, and nominal 95% intervals keep close to 95% coverage as the record grows
+              (Ornstein&ndash;Uhlenbeck, left pair; double-well, right pair).</figcaption>
+          </figure>
+        </div>
+
+        <div class="chips">
+          <span class="chip">Weak form</span><span class="chip">Instrumental variables</span>
+          <span class="chip">Generalized method of moments</span><span class="chip">Drift &amp; diffusion learning</span>
+          <span class="chip">Uncertainty quantification</span>
+        </div>
+      </article>
 
       <div class="feature">
         <figure class="feature-media" style="margin:0">
@@ -501,6 +619,13 @@
       <div class="pub-group">
         <h3>Preprints</h3>
         <ul class="pubs" data-group="preprint">
+          <li><span class="yr">2026</span>
+            <div><span class="title">WAIVES: Weak-form Asymptotically-unbiased Instrumental-Variable Estimation for
+                SDEs</span>
+              <span class="authors"><b>Ruzayqat, H.</b>, Bortz, D. M. &amp; Duki&cacute;, V.</span>
+              <span class="venue"><a href="https://arxiv.org/abs/2611.23951" target="_blank" rel="noopener">arXiv:2611.23951</a></span>
+            </div><a class="pdf" href="https://arxiv.org/pdf/2611.23951" target="_blank" rel="noopener">PDF</a>
+          </li>
           <li><span class="yr">2026</span>
             <div><span class="title">Whittle&ndash;Matérn Fields with Variable Smoothness</span>
               <span class="authors"><b>Ruzayqat, H.</b>, Lei, W., Bolin, D., Turkiyyah, G. &amp; Knio, O.</span>
