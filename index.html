@@ -353,18 +353,28 @@
         </div>
 
         <div class="spot-figs">
-          <figure class="feature-media">
-            <img src="images/web/waives-systems.jpg" width="1200" height="746" loading="lazy"
-              alt="Latent paths and noisy observations for the Ornstein-Uhlenbeck, double-well, stochastic Lorenz-63 and FitzHugh-Nagumo systems" />
-            <figcaption>Noisy observations (orange) of the latent path (blue) for four of the nine test systems:
-              Ornstein&ndash;Uhlenbeck, double-well, stochastic Lorenz-63 and FitzHugh&ndash;Nagumo.</figcaption>
+          <figure class="feature-media wide">
+            <img src="images/web/waives-noise-levels.jpg" width="1800" height="1005" loading="lazy"
+              alt="Latent paths and noisy observations for all nine test systems, at the main noise level and at a stress noise level of 15 percent of each component's range" />
+            <figcaption>All nine test systems: latent path (blue) and noisy observations (orange) at the main noise
+              level and at a stress level whose noise standard deviation is 15% of each component&rsquo;s range.
+              Ornstein&ndash;Uhlenbeck, double-well, Lorenz-63, FitzHugh&ndash;Nagumo, Cox&ndash;Ingersoll&ndash;Ross,
+              Lorenz-96, Kuramoto, underdamped Langevin, and Lorenz-63 seen through a non-identity observation
+              map.</figcaption>
           </figure>
-          <figure class="feature-media">
+          <figure class="feature-media wide">
             <img src="images/web/waives-histograms.jpg" width="1400" height="730" loading="lazy"
               alt="Histograms of WAIVES estimates for nine systems, each centred on the true value with a Gaussian fit" />
             <figcaption>Accuracy across all nine systems: estimates of one representative parameter from 1000
               independent trajectories (200 for Lorenz-96) are centred on the truth (red dashed) and close to Gaussian
               (insets: normal Q&ndash;Q plots).</figcaption>
+          </figure>
+          <figure class="feature-media wide">
+            <img src="images/web/waives-coverage.jpg" width="2000" height="590" loading="lazy"
+              alt="Standard errors shrinking with record length and confidence-interval coverage near 95 percent for two systems" />
+            <figcaption>Calibrated uncertainty: plug-in standard errors track the true sampling spread and shrink like
+              1/&radic;T, and nominal 95% intervals keep close to 95% coverage as the record grows
+              (Ornstein&ndash;Uhlenbeck, left pair; double-well, right pair).</figcaption>
           </figure>
           <figure class="feature-media wide">
             <img src="images/web/waives-amo.jpg" width="2000" height="572" loading="lazy"
@@ -375,11 +385,14 @@
               the record cannot distinguish a single well from a shallow double well.</figcaption>
           </figure>
           <figure class="feature-media wide">
-            <img src="images/web/waives-coverage.jpg" width="2000" height="590" loading="lazy"
-              alt="Standard errors shrinking with record length and confidence-interval coverage near 95 percent for two systems" />
-            <figcaption>Calibrated uncertainty: plug-in standard errors track the true sampling spread and shrink like
-              1/&radic;T, and nominal 95% intervals keep close to 95% coverage as the record grows
-              (Ornstein&ndash;Uhlenbeck, left pair; double-well, right pair).</figcaption>
+            <img src="images/web/waives-trap.jpg" width="1995" height="690" loading="lazy"
+              alt="Optical-trap calibration: drift lines learned by WAIVES overlapping the first-principles reference at three laser powers, and learned diffusion coefficients within a few percent of the Einstein value" />
+            <figcaption>Real data: calibrating an optical trap, with the published records of Gieseler et al. (2021), a
+              1.03&nbsp;&micro;m bead in water, five records of 10<sup>6</sup> samples at each of three laser powers.
+              (A) The drift learned by WAIVES (solid) against the first-principles reference from Stokes drag and
+              noise-corrected equipartition (dashed): the stiffness is within about 3% at every power. (B) The learned
+              diffusion against the Einstein&ndash;Smoluchowski value D = k<sub>B</sub>T/&gamma;, within &minus;0.2% to
+              +2.3%. Plotted from the values reported in the paper (mean &plusmn; s.d. over the five records).</figcaption>
           </figure>
         </div>
 
@@ -392,12 +405,12 @@
 
       <div class="feature">
         <figure class="feature-media" style="margin:0">
-          <img src="images/web/fig-feature.jpg" alt="North Atlantic sea-surface height, velocity and temperature reconstructed by localized sequential MCMC versus HYCOM reanalysis" loading="lazy" />
+          <img src="images/web/fig-feature.jpg?v=2" alt="North Atlantic velocity and temperature reconstructed by localized sequential MCMC versus HYCOM reanalysis" loading="lazy" />
           <figcaption>Real-data experiment (JAMES, 2026): localized sequential MCMC assimilates real drifter velocity and
             temperature observations and SWOT sea-surface height into a three-layer shallow-water model of the North
             Atlantic (state dimension 67,200) over 240 cycles, starting from the HYCOM state at the initial time with
             added noise. Columns: analysis at the first cycle (left) and final cycle (centre), and the HYCOM reanalysis
-            at the final time (right). Rows: sea-surface height, eastward and northward velocity, temperature.</figcaption>
+            at the final time (right). Rows: eastward velocity, northward velocity and sea-surface temperature.</figcaption>
         </figure>
         <div>
           <span class="kicker">Data assimilation</span>
@@ -500,6 +513,35 @@
         </div>
         <p>In SIAM journals, J. Comput. Phys., QJRMS, Mathematics of Computation, JAMES, Statistics and Computing, and
           others.</p>
+      </div>
+
+      <div class="pub-group">
+        <h3>Preprints</h3>
+        <ul class="pubs" data-group="preprint">
+          <li><span class="yr">2026</span>
+            <div><span class="title">WAIVES: Weak-form Asymptotically-unbiased Instrumental-Variable Estimation for
+                SDEs</span>
+              <span class="authors"><b>Ruzayqat, H.</b>, Bortz, D. M. &amp; Duki&cacute;, V.</span>
+              <span class="venue"><a href="https://arxiv.org/abs/2611.23951" target="_blank" rel="noopener">arXiv:2611.23951</a></span>
+            </div><a class="pdf" href="https://arxiv.org/pdf/2611.23951" target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li><span class="yr">2026</span>
+            <div><span class="title">Whittle&ndash;Matérn Fields with Variable Smoothness</span>
+              <span class="authors"><b>Ruzayqat, H.</b>, Lei, W., Bolin, D., Turkiyyah, G. &amp; Knio, O.</span>
+            </div><a class="pdf" href="https://arxiv.org/pdf/2602.16581" target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li><span class="yr">2025</span>
+            <div><span class="title">Bayesian Anomaly Detection in Variable-Order and Variable-Diffusivity Fractional
+                Mediums</span>
+              <span class="authors"><b>Ruzayqat, H.</b>, Turkiyyah, G. &amp; Knio, O.</span>
+            </div>
+          </li>
+          <li><span class="yr">2024</span>
+            <div><span class="title">Local Sequential MCMC for Data Assimilation with Applications in Geoscience</span>
+              <span class="authors"><b>Ruzayqat, H.</b> &amp; Knio, O.</span>
+            </div><a class="pdf" href="https://arxiv.org/pdf/2409.07111" target="_blank" rel="noopener">PDF</a>
+          </li>
+        </ul>
       </div>
 
       <div class="pub-group">
@@ -613,35 +655,6 @@
               <span class="venue">Journal of Chemical Theory and Computation, 14(1), 48&ndash;54</span>
             </div><a class="pdf" href="https://web.math.utk.edu/~schulze/paper33.pdf" target="_blank"
               rel="noopener">PDF</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="pub-group">
-        <h3>Preprints</h3>
-        <ul class="pubs" data-group="preprint">
-          <li><span class="yr">2026</span>
-            <div><span class="title">WAIVES: Weak-form Asymptotically-unbiased Instrumental-Variable Estimation for
-                SDEs</span>
-              <span class="authors"><b>Ruzayqat, H.</b>, Bortz, D. M. &amp; Duki&cacute;, V.</span>
-              <span class="venue"><a href="https://arxiv.org/abs/2611.23951" target="_blank" rel="noopener">arXiv:2611.23951</a></span>
-            </div><a class="pdf" href="https://arxiv.org/pdf/2611.23951" target="_blank" rel="noopener">PDF</a>
-          </li>
-          <li><span class="yr">2026</span>
-            <div><span class="title">Whittle&ndash;Matérn Fields with Variable Smoothness</span>
-              <span class="authors"><b>Ruzayqat, H.</b>, Lei, W., Bolin, D., Turkiyyah, G. &amp; Knio, O.</span>
-            </div><a class="pdf" href="https://arxiv.org/pdf/2602.16581" target="_blank" rel="noopener">PDF</a>
-          </li>
-          <li><span class="yr">2025</span>
-            <div><span class="title">Bayesian Anomaly Detection in Variable-Order and Variable-Diffusivity Fractional
-                Mediums</span>
-              <span class="authors"><b>Ruzayqat, H.</b>, Turkiyyah, G. &amp; Knio, O.</span>
-            </div>
-          </li>
-          <li><span class="yr">2024</span>
-            <div><span class="title">Local Sequential MCMC for Data Assimilation with Applications in Geoscience</span>
-              <span class="authors"><b>Ruzayqat, H.</b> &amp; Knio, O.</span>
-            </div><a class="pdf" href="https://arxiv.org/pdf/2409.07111" target="_blank" rel="noopener">PDF</a>
           </li>
         </ul>
       </div>
